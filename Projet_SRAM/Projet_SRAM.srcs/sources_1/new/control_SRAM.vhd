@@ -22,6 +22,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+
+-- synopsys translate_on
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -39,9 +41,9 @@ entity control_SRAM is
     addr_in  : in  std_logic_vector(18 downto 0);
     data_in  : in  std_logic_vector(35 downto 0);
     data_out : out std_logic_vector(35 downto 0);
-    we       : in  std_logic;  -- 1 = demande écriture
-    re       : in  std_logic;  -- 1 = demande lecture
-    ready    : out std_logic;  -- 1 = opération terminée
+    we       : in  std_logic;  
+    re       : in  std_logic;  
+    ready    : out std_logic;  
 
     -- Interface SRAM
     Addr     : out std_logic_vector(18 downto 0);
@@ -56,23 +58,105 @@ entity control_SRAM is
   );end control_SRAM;
 
 architecture Behavioral of control_SRAM is
-  type state_t is (IDLE, ADDR_LOAD, WRITE_DATA, READ_CAPTURE, DESELECT);
+  type state_t is (IDLE, INIT, WRITE_DATA, READ_CAPTURE);
   signal state, next_state : state_t := IDLE;
 
   signal addr_reg : std_logic_vector(18 downto 0);
   signal data_out_reg : std_logic_vector(35 downto 0);
   signal dq_out : std_logic_vector(35 downto 0);
-  signal dq_t   : std_logic := '1';  -- tri-state control ('1' = Z, '0' = drive)
+  signal dq_t   : std_logic := '1';  -- tri-state
 
 begin
 
+process(state, we, re)
+  begin
+    case state is
+
+      when INIT => 
+        next_state <= IDLE;
+
+      when IDLE =>
+        if we = '1' then
+          next_state <= WRITE_DATA;
+        elsif re = '1' then
+          next_state <= READ_CAPTURE;
+        else
+          next_state <= IDLE;
+        end if;
+
+      when WRITE_DATA =>
+      if we = '1' then
+          next_state <= WRITE_DATA;
+        elsif re = '1' then
+          next_state <= READ_CAPTURE;
+        else
+          next_state <= IDLE;
+        end if;
+
+      when READ_CAPTURE =>
+      if we = '1' then
+          next_state <= WRITE_DATA;
+        elsif re = '1' then
+          next_state <= READ_CAPTURE;
+        else
+          next_state <= IDLE;
+        end if;
+
+    end case;
+end process;
 
 
+process(clk, reset)
+  begin
+    if reset = '1' then
+      state <= IDLE;
+      addr_reg <= (others => '0');
+      data_out_reg <= (others => '0');
+      dq_out <= (others => '0');
+      dq_t <= '1';
+    elsif rising_edge(clk) then
+      state <= next_state;
+
+  
+
+      case state is
+        when IDLE =>
+        
+
+        when INIT =>
+        Ce_n  <= '1'; 
+        Ce2 <= '1'; 
+        Ce2_n <= '1';
+        Cke_n <= '1'; 
+        Ld_n <= '1';
+        Rw_n  <= '1'; 
+        Oe_n <= '1';
+        dq_t  <= '1';
 
 
+        when WRITE_DATA =>
+        Ce_n  <= '0'; 
+        Ce2 <= '0'; 
+        Ce2_n <= '0';
+        Cke_n <= '0'; 
+        Rw_n <= '0'; 
+        Ld_n <= '1';
+        dq_out <= data_in;
+        dq_t   <= '0'; 
 
+        when READ_CAPTURE =>
+        Ce_n  <= '0'; 
+        Ce2 <= '1'; 
+        Ce2_n <= '0';
+        Cke_n <= '0'; 
+        Rw_n <= '1'; 
+        Ld_n <= '1';
+        Oe_n  <= '0';
+        data_out_reg <= Dq;
 
-
+      end case;
+    end if;
+  end process;
 
 
 
