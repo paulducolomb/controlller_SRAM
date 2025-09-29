@@ -79,7 +79,7 @@ set_param synth.vivado.isSynthRun true
 set_property webtalk.parent_dir C:/Users/pauld/Projet_SRAM/Projet_SRAM.cache/wt [current_project]
 set_property parent.project_path C:/Users/pauld/Projet_SRAM/Projet_SRAM.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
-set_property target_language Verilog [current_project]
+set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/pauld/AppData/Roaming/Xilinx/Vivado/2021.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part avnet.com:zedboard:part0:1.4 [current_project]
 set_property ip_output_repo c:/Users/pauld/Projet_SRAM/Projet_SRAM.cache/ip [current_project]
@@ -97,6 +97,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/pauld/Projet_SRAM/Projet_SRAM.srcs/utils_1/imports/synth_1/control_SRAM.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date             : Tue Sep 23 09:35:40 2025
+| Date             : Mon Sep 29 16:39:09 2025
 | Host             : Zenbook_de_Paul running 64-bit major release  (build 9200)
 | Command          : report_power -file control_SRAM_power_routed.rpt -pb control_SRAM_power_summary_routed.pb -rpx control_SRAM_power_routed.rpx
 | Design           : control_SRAM
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+---------------------------------+
-| Total On-Chip Power (W)  | 7.890 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 9.002 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                    |
 | Power Budget Margin (W)  | NA                              |
-| Dynamic (W)              | 7.110                           |
-| Device Static (W)        | 0.780                           |
+| Dynamic (W)              | 7.965                           |
+| Device Static (W)        | 1.037                           |
 | Effective TJA (C/W)      | 11.5                            |
 | Max Ambient (C)          | 0.0                             |
-| Junction Temperature (C) | 116.0                           |
+| Junction Temperature (C) | 125.0                           |
 | Confidence Level         | Low                             |
 | Setting File             | ---                             |
 | Simulation Activity File | ---                             |
@@ -52,15 +52,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.054 |      120 |       --- |             --- |
-|   LUT as Logic |     0.038 |       10 |     53200 |            0.02 |
-|   Register     |     0.009 |      104 |    106400 |            0.10 |
+| Slice Logic    |     0.022 |      113 |       --- |             --- |
+|   LUT as Logic |     0.011 |        5 |     53200 |           <0.01 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
+|   Register     |     0.005 |      102 |    106400 |            0.10 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.618 |      207 |       --- |             --- |
-| I/O            |     6.438 |      158 |       200 |           79.00 |
-| Static Power   |     0.780 |          |           |                 |
-| Total          |     7.890 |          |           |                 |
+| Signals        |     0.559 |      201 |       --- |             --- |
+| I/O            |     7.385 |      158 |       200 |           79.00 |
+| Static Power   |     1.037 |          |           |                 |
+| Total          |     9.002 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,20 +70,20 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     1.141 |       0.920 |      0.221 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.586 |       0.507 |      0.079 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     1.192 |       0.894 |      0.299 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.679 |       0.579 |      0.100 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco18    |       1.800 |     2.933 |       2.932 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     3.351 |       3.350 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.016 |       0.000 |      0.016 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.024 |       0.000 |      0.024 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.338 |       0.000 |      0.338 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.473 |       0.000 |      0.473 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -144,43 +144,43 @@ Table of Contents
 +---------------------+-----------+
 | Name                | Power (W) |
 +---------------------+-----------+
-| control_SRAM        |     7.110 |
-|   Dq_IOBUF[0]_inst  |     0.026 |
-|   Dq_IOBUF[10]_inst |     0.026 |
-|   Dq_IOBUF[11]_inst |     0.026 |
-|   Dq_IOBUF[12]_inst |     0.026 |
-|   Dq_IOBUF[13]_inst |     0.027 |
-|   Dq_IOBUF[14]_inst |     0.027 |
-|   Dq_IOBUF[15]_inst |     0.027 |
-|   Dq_IOBUF[16]_inst |     0.026 |
-|   Dq_IOBUF[17]_inst |     0.026 |
-|   Dq_IOBUF[18]_inst |     0.027 |
-|   Dq_IOBUF[19]_inst |     0.027 |
-|   Dq_IOBUF[1]_inst  |     0.026 |
-|   Dq_IOBUF[20]_inst |     0.027 |
-|   Dq_IOBUF[21]_inst |     0.027 |
-|   Dq_IOBUF[22]_inst |     0.027 |
-|   Dq_IOBUF[23]_inst |     0.027 |
-|   Dq_IOBUF[24]_inst |     0.027 |
-|   Dq_IOBUF[25]_inst |     0.027 |
-|   Dq_IOBUF[26]_inst |     0.027 |
-|   Dq_IOBUF[27]_inst |     0.027 |
-|   Dq_IOBUF[28]_inst |     0.027 |
-|   Dq_IOBUF[29]_inst |     0.027 |
-|   Dq_IOBUF[2]_inst  |     0.026 |
-|   Dq_IOBUF[30]_inst |     0.027 |
-|   Dq_IOBUF[31]_inst |     0.027 |
-|   Dq_IOBUF[32]_inst |     0.027 |
-|   Dq_IOBUF[33]_inst |     0.027 |
-|   Dq_IOBUF[34]_inst |     0.027 |
-|   Dq_IOBUF[35]_inst |     0.027 |
-|   Dq_IOBUF[3]_inst  |     0.026 |
-|   Dq_IOBUF[4]_inst  |     0.026 |
-|   Dq_IOBUF[5]_inst  |     0.026 |
-|   Dq_IOBUF[6]_inst  |     0.026 |
-|   Dq_IOBUF[7]_inst  |     0.026 |
-|   Dq_IOBUF[8]_inst  |     0.026 |
-|   Dq_IOBUF[9]_inst  |     0.026 |
+| control_SRAM        |     7.965 |
+|   Dq_IOBUF[0]_inst  |     0.138 |
+|   Dq_IOBUF[10]_inst |     0.138 |
+|   Dq_IOBUF[11]_inst |     0.138 |
+|   Dq_IOBUF[12]_inst |     0.138 |
+|   Dq_IOBUF[13]_inst |     0.138 |
+|   Dq_IOBUF[14]_inst |     0.138 |
+|   Dq_IOBUF[15]_inst |     0.139 |
+|   Dq_IOBUF[16]_inst |     0.139 |
+|   Dq_IOBUF[17]_inst |     0.139 |
+|   Dq_IOBUF[18]_inst |     0.139 |
+|   Dq_IOBUF[19]_inst |     0.140 |
+|   Dq_IOBUF[1]_inst  |     0.137 |
+|   Dq_IOBUF[20]_inst |     0.139 |
+|   Dq_IOBUF[21]_inst |     0.139 |
+|   Dq_IOBUF[22]_inst |     0.139 |
+|   Dq_IOBUF[23]_inst |     0.139 |
+|   Dq_IOBUF[24]_inst |     0.139 |
+|   Dq_IOBUF[25]_inst |     0.139 |
+|   Dq_IOBUF[26]_inst |     0.139 |
+|   Dq_IOBUF[27]_inst |     0.140 |
+|   Dq_IOBUF[28]_inst |     0.140 |
+|   Dq_IOBUF[29]_inst |     0.140 |
+|   Dq_IOBUF[2]_inst  |     0.138 |
+|   Dq_IOBUF[30]_inst |     0.139 |
+|   Dq_IOBUF[31]_inst |     0.140 |
+|   Dq_IOBUF[32]_inst |     0.140 |
+|   Dq_IOBUF[33]_inst |     0.140 |
+|   Dq_IOBUF[34]_inst |     0.140 |
+|   Dq_IOBUF[35]_inst |     0.140 |
+|   Dq_IOBUF[3]_inst  |     0.138 |
+|   Dq_IOBUF[4]_inst  |     0.138 |
+|   Dq_IOBUF[5]_inst  |     0.138 |
+|   Dq_IOBUF[6]_inst  |     0.138 |
+|   Dq_IOBUF[7]_inst  |     0.138 |
+|   Dq_IOBUF[8]_inst  |     0.138 |
+|   Dq_IOBUF[9]_inst  |     0.138 |
 +---------------------+-----------+
 
 

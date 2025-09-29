@@ -109,19 +109,31 @@ end process;
 process(clk, reset)
   begin
     if reset = '1' then
-      state <= IDLE;
-      addr_reg <= (others => '0');
-      data_out_reg <= (others => '0');
-      dq_out <= (others => '0');
-      dq_t <= '1';
-    elsif rising_edge(clk) then
-      state <= next_state;
 
-  
+      state        <= IDLE;
+      addr_reg     <= (others => '0');
+      data_out_reg <= (others => '0');
+      dq_out       <= (others => '0');
+      dq_t         <= '1';
+
+    elsif falling_edge(clk) then
+     
+      state <= next_state;
+      --valeur par défaut 
+      Ce_n  <= '1';
+      Ce2   <= '0';
+      Ce2_n <= '1';
+      Cke_n <= '1';
+      Ld_n  <= '1';
+      Rw_n  <= '1';
+      Oe_n  <= '1';
+      dq_t  <= '1';   
+      ready <= '0';
 
       case state is
         when IDLE =>
-        
+        ready <= '1';
+        --rien pour le moment 
 
         when INIT =>
         Ce_n  <= '1'; 
@@ -132,17 +144,20 @@ process(clk, reset)
         Rw_n  <= '1'; 
         Oe_n <= '1';
         dq_t  <= '1';
+        ready  <= '1';
 
 
         when WRITE_DATA =>
         Ce_n  <= '0'; 
-        Ce2 <= '0'; 
+        Ce2 <= '1'; 
         Ce2_n <= '0';
         Cke_n <= '0'; 
         Rw_n <= '0'; 
         Ld_n <= '1';
         dq_out <= data_in;
+        Addr   <= addr_in;
         dq_t   <= '0'; 
+        ready  <= '0';
 
         when READ_CAPTURE =>
         Ce_n  <= '0'; 
@@ -152,12 +167,17 @@ process(clk, reset)
         Rw_n <= '1'; 
         Ld_n <= '1';
         Oe_n  <= '0';
+        dq_t   <= '1';
         data_out_reg <= Dq;
+        ready  <= '0';
 
       end case;
     end if;
   end process;
 
+  data_out <= data_out_reg;
 
+  -- bus
+  Dq <= dq_out when dq_t = '0' else (others => 'Z');
 
 end Behavioral;
