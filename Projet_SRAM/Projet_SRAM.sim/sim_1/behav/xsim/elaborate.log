@@ -13,7 +13,15 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
 Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
 Compiling architecture behave of entity xil_defaultlib.mt55l512y36f [mt55l512y36f_default]
+Compiling architecture obuft_v of entity unisim.OBUFT [\OBUFT(drive=16,slew="FAST")(1,9...]
+Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(1,9)(1,1)(1,4)(1,7)\]
+Compiling architecture iobuf_f_16_v of entity unisim.IOBUF_F_16 [iobuf_f_16_default]
+Compiling architecture arch_test_io of entity xil_defaultlib.test_io [test_io_default]
 Compiling architecture behavioral of entity xil_defaultlib.control_SRAM [control_sram_default]
 Compiling architecture behavior of entity xil_defaultlib.tb_test_sram
 Built simulation snapshot tb_test_sram_behav
