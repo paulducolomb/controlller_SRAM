@@ -29,6 +29,9 @@ use IEEE.STD_LOGIC_1164.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+library unisim;
+use unisim.VComponents.all;
+
 entity control_SRAM is
   port (
 
@@ -56,14 +59,8 @@ entity control_SRAM is
   );
 end control_SRAM;
 
-
-
-
-
-
-
 architecture Behavioral of control_SRAM is
-  type state_t is (IDLE, INIT, WRITE_DATA, READ_CAPTURE,BURST_WRITE,BURST_READ);
+  type state_t is (IDLE, INIT, WRITE_DATA, READ_CAPTURE, BURST_WRITE, BURST_READ);
   signal state, next_state : state_t := IDLE;
 
   signal addr_reg     : std_logic_vector(18 downto 0);
@@ -71,28 +68,28 @@ architecture Behavioral of control_SRAM is
   signal dq_out       : std_logic_vector(35 downto 0);
   signal dq_t         : std_logic := '1'; -- tri-state
 
-component test_io is
-  port (
-    SORTIE 			   : out std_logic;
-    CLK, nRESET    	   : in  std_logic;
-    TRIG               : in std_logic;
-	E_S				   : inout std_logic;
-	ENTREE			   : in  std_logic
+  component test_io is
+    port (
+      SORTIE      : out std_logic;
+      CLK, nRESET : in std_logic;
+      TRIG        : in std_logic;
+      E_S         : inout std_logic;
+      ENTREE      : in std_logic
     );
-end component;
-    
+  end component;
+
 begin
 
   process (state, we, re)
   begin
     case state is
-    
+
       when BURST_WRITE =>
-      next_state <= BURST_WRITE;
-      
+        next_state <= BURST_WRITE;
+
       when BURST_READ =>
-      next_state <= BURST_READ;
-      
+        next_state <= BURST_READ;
+
       when INIT =>
         next_state <= IDLE;
 
@@ -125,17 +122,13 @@ begin
 
     end case;
   end process;
-  
-  
-  
+
   process (clk, reset)
   begin
     if reset = '1' then
 
-      state        <= IDLE;
+      state        <= INIT;
       addr_reg     <= (others => '0');
-      data_out_reg <= (others => '0');
-      dq_out       <= (others => '0');
       dq_t         <= '1';
       Ce_n         <= '1';
       Ce2          <= '0';
@@ -146,20 +139,12 @@ begin
       Oe_n         <= '0';
       dq_t         <= '1';
       ready        <= '0';
-      
+
     elsif falling_edge(clk) then
 
       state <= next_state;
       --valeur par d�faut 
-
-
       case state is
-        when IDLE =>
-          ready <= '1';
-          dq_t  <= '1';
-          Ce_n  <= '0';
-          Ce2   <= '0';
-          Ce2_n <= '0';
 
         when INIT =>
           Ce_n  <= '1';
@@ -167,55 +152,61 @@ begin
           Ce2_n <= '1';
           Ld_n  <= '1';
           Rw_n  <= '1';
-          dq_t  <= '1';
+          dq_t  <= '1'; --tristate
           ready <= '1';
-          
+
+        when IDLE =>
+          ready <= '1';
+          dq_t  <= '1'; --tristate
+          Ce_n  <= '0';
+          Ce2   <= '0';
+          Ce2_n <= '0';
+
         when WRITE_DATA =>
           Ce_n   <= '0';
           Ce2    <= '1';
           Ce2_n  <= '0';
           Rw_n   <= '0';
           Ld_n   <= '0';
+          dq_t   <= '0'; --tristate
+          ready  <= '0';
           dq_out <= data_in;
           Addr   <= addr_in;
-          dq_t   <= '0';
-          ready  <= '0';
-          
-        when  BURST_WRITE =>
-          Ce_n   <= '0';
-          Ce2    <= '1';
-          Ce2_n  <= '1';
-          Cke_n  <= '0';
-          Rw_n   <= '1';
-          Ld_n   <= '1';
-          --dq_out <= data_in;
-          --Addr   <= addr_in;
-          dq_t   <= '0';
-          ready  <= '0';
-          
-        when  BURST_READ =>
-          Ce_n   <= '0';
-          Ce2    <= '1';
-          Ce2_n  <= '1';
-          Cke_n  <= '0';
-          Rw_n   <= '1';
-          Ld_n   <= '1';
-          --dq_out <= data_in;
-          --Addr   <= addr_in;
-          dq_t   <= '0';
-          ready  <= '0';  
-       
 
+        when BURST_WRITE =>
+          Ce_n  <= '0';
+          Ce2   <= '0';
+          Ce2_n <= '0';
+          Cke_n <= '0';
+          Rw_n  <= '0';
+          Ld_n  <= '1';
+          --dq_out <= data_in;
+          --Addr   <= addr_in;
+          dq_t  <= '0'; --tristate
+          ready <= '0';
+
+        when BURST_READ =>
+          Ce_n  <= '0';
+          Ce2   <= '0';
+          Ce2_n <= '0';
+          Cke_n <= '0';
+          Rw_n  <= '1';
+          Ld_n  <= '1';
+          --dq_out <= data_in;
+          --Addr   <= addr_in;
+          dq_t  <= '1'; --tristate
+          ready <= '0';
         when READ_CAPTURE =>
           Ce_n         <= '0';
-          Ce2          <= '1';
+          Ce2          <= '0';
           Ce2_n        <= '0';
           Cke_n        <= '0';
           Rw_n         <= '1';
           Ld_n         <= '0';
-          dq_t         <= '1';
-          data_out_reg <= Dq;
+          dq_t         <= '1'; --tristate
           ready        <= '0';
+
+        when others =>
 
       end case;
     end if;
@@ -225,16 +216,17 @@ begin
 
   -- bus
   --Dq <= dq_out when dq_t = '0' else (others => 'Z');
-    gen_iobuf : for i in 0 to 35 generate
-      U_IOBUF_bit : test_io
-        port map (
-          SORTIE => data_out_reg(i),
-          CLK    => clk,
-          nRESET => reset,
-          TRIG   => dq_t,      
-          E_S    => Dq(i),     
-          ENTREE => dq_out(i) 
-        );
-    end generate;
-    
+  gen_iobuf : for i in 0 to 35 generate
+    U_IOBUF_bit : test_io
+    port map
+    (
+      SORTIE => data_out_reg(i),
+      CLK    => clk,
+      nRESET => reset,
+      TRIG   => dq_t,
+      E_S    => Dq(i),
+      ENTREE => dq_out(i)
+    );
+  end generate;
+
 end Behavioral;
