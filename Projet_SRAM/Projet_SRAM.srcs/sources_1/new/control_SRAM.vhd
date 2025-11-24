@@ -66,7 +66,9 @@ architecture Behavioral of control_SRAM is
   signal addr_reg     : std_logic_vector(18 downto 0);
   signal data_out_reg : std_logic_vector(35 downto 0);
   signal dq_out       : std_logic_vector(35 downto 0);
+  signal dq_out_late  : std_logic_vector(35 downto 0);
   signal dq_t         : std_logic := '1'; -- tri-state
+  signal dq_t_late    : std_logic := '1'; 
 
   component test_io is
     port (
@@ -126,8 +128,24 @@ begin
   process (clk, reset)
   begin
     if reset = '1' then
-
       state        <= INIT;
+      dq_t_late    <= '0';
+      dq_out_late <= (others => '0');
+    elsif falling_edge(clk) then
+      state <= next_state;
+      
+      dq_out_late <= data_in;
+      dq_t_late <= dq_t;
+      Addr   <= addr_in;
+
+    end if;
+  end process;
+  
+  process (state)
+  begin
+      case state is
+
+        when INIT =>
       addr_reg     <= (others => '0');
       dq_t         <= '1';
       Ce_n         <= '1';
@@ -140,27 +158,14 @@ begin
       dq_t         <= '1';
       ready        <= '0';
 
-    elsif falling_edge(clk) then
-
-      state <= next_state;
-      --valeur par d�faut 
-      case state is
-
-        when INIT =>
-          Ce_n  <= '1';
-          Ce2   <= '1';
-          Ce2_n <= '1';
-          Ld_n  <= '1';
-          Rw_n  <= '1';
-          dq_t  <= '1'; --tristate
-          ready <= '1';
-
         when IDLE =>
           ready <= '1';
           dq_t  <= '1'; --tristate
           Ce_n  <= '0';
-          Ce2   <= '0';
+          Ce2   <= '1';
           Ce2_n <= '0';
+          Rw_n  <= '1';
+          Ld_n   <= '0';
 
         when WRITE_DATA =>
           Ce_n   <= '0';
@@ -170,12 +175,11 @@ begin
           Ld_n   <= '0';
           dq_t   <= '0'; --tristate
           ready  <= '0';
-          dq_out <= data_in;
-          Addr   <= addr_in;
+          
 
         when BURST_WRITE =>
           Ce_n  <= '0';
-          Ce2   <= '0';
+          Ce2   <= '1';
           Ce2_n <= '0';
           Cke_n <= '0';
           Rw_n  <= '0';
@@ -187,7 +191,7 @@ begin
 
         when BURST_READ =>
           Ce_n  <= '0';
-          Ce2   <= '0';
+          Ce2   <= '1';
           Ce2_n <= '0';
           Cke_n <= '0';
           Rw_n  <= '1';
@@ -198,7 +202,7 @@ begin
           ready <= '0';
         when READ_CAPTURE =>
           Ce_n         <= '0';
-          Ce2          <= '0';
+          Ce2          <= '1';
           Ce2_n        <= '0';
           Cke_n        <= '0';
           Rw_n         <= '1';
@@ -209,9 +213,8 @@ begin
         when others =>
 
       end case;
-    end if;
   end process;
-
+  dq_out <= dq_out_late;
   data_out <= data_out_reg;
 
   -- bus
@@ -223,7 +226,7 @@ begin
       SORTIE => data_out_reg(i),
       CLK    => clk,
       nRESET => reset,
-      TRIG   => dq_t,
+      TRIG   => dq_t_late,
       E_S    => Dq(i),
       ENTREE => dq_out(i)
     );

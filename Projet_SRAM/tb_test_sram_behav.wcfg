@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="76.590 ns"></ZoomStartTime>
-      <ZoomEndTime time="269.591 ns"></ZoomEndTime>
-      <Cursor1Time time="102.190 ns"></Cursor1Time>
+      <ZoomStartTime time="316.380 ns"></ZoomStartTime>
+      <ZoomEndTime time="417.381 ns"></ZoomEndTime>
+      <Cursor1Time time="353.180 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="225"></NameColumnWidth>
-      <ValueColumnWidth column_width="118"></ValueColumnWidth>
+      <ValueColumnWidth column_width="98"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="42" />
+   <WVObjectSize size="49" />
    <wvobject fp_name="/tb_test_sram/CLKO_SRAM" type="logic">
       <obj_property name="ElementShortName">CLKO_SRAM</obj_property>
       <obj_property name="ObjectShortName">CLKO_SRAM</obj_property>
@@ -131,9 +131,25 @@
       <obj_property name="ElementShortName">Addr[18:0]</obj_property>
       <obj_property name="ObjectShortName">Addr[18:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_test_sram/CTRL1/Addr" type="array">
+      <obj_property name="ElementShortName">Addr[18:0]</obj_property>
+      <obj_property name="ObjectShortName">Addr[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_test_sram/CTRL1/dq_t" type="logic">
+      <obj_property name="ElementShortName">dq_t</obj_property>
+      <obj_property name="ObjectShortName">dq_t</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_test_sram/CTRL1/dq_t_late" type="logic">
+      <obj_property name="ElementShortName">dq_t_late</obj_property>
+      <obj_property name="ObjectShortName">dq_t_late</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_test_sram/CTRL1/Dq" type="array">
       <obj_property name="ElementShortName">Dq[35:0]</obj_property>
       <obj_property name="ObjectShortName">Dq[35:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_test_sram/CTRL1/Rw_n" type="logic">
+      <obj_property name="ElementShortName">Rw_n</obj_property>
+      <obj_property name="ObjectShortName">Rw_n</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_test_sram/CTRL1/Ce_n" type="logic">
       <obj_property name="ElementShortName">Ce_n</obj_property>
@@ -146,18 +162,6 @@
    <wvobject fp_name="/tb_test_sram/CTRL1/Ce2_n" type="logic">
       <obj_property name="ElementShortName">Ce2_n</obj_property>
       <obj_property name="ObjectShortName">Ce2_n</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_test_sram/CTRL1/Oe_n" type="logic">
-      <obj_property name="ElementShortName">Oe_n</obj_property>
-      <obj_property name="ObjectShortName">Oe_n</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_test_sram/CTRL1/Rw_n" type="logic">
-      <obj_property name="ElementShortName">Rw_n</obj_property>
-      <obj_property name="ObjectShortName">Rw_n</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_test_sram/CTRL1/Ld_n" type="logic">
-      <obj_property name="ElementShortName">Ld_n</obj_property>
-      <obj_property name="ObjectShortName">Ld_n</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_test_sram/CTRL1/Cke_n" type="logic">
       <obj_property name="ElementShortName">Cke_n</obj_property>
@@ -186,5 +190,29 @@
    <wvobject fp_name="/tb_test_sram/CTRL1/dq_t" type="logic">
       <obj_property name="ElementShortName">dq_t</obj_property>
       <obj_property name="ObjectShortName">dq_t</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_test_sram/SRAM1/Bwa_n" type="logic">
+      <obj_property name="ElementShortName">Bwa_n</obj_property>
+      <obj_property name="ObjectShortName">Bwa_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_test_sram/SRAM1/Bwb_n" type="logic">
+      <obj_property name="ElementShortName">Bwb_n</obj_property>
+      <obj_property name="ObjectShortName">Bwb_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_test_sram/SRAM1/Bwc_n" type="logic">
+      <obj_property name="ElementShortName">Bwc_n</obj_property>
+      <obj_property name="ObjectShortName">Bwc_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_test_sram/SRAM1/Bwd_n" type="logic">
+      <obj_property name="ElementShortName">Bwd_n</obj_property>
+      <obj_property name="ObjectShortName">Bwd_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_test_sram/SRAM1/Lbo_n" type="logic">
+      <obj_property name="ElementShortName">Lbo_n</obj_property>
+      <obj_property name="ObjectShortName">Lbo_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_test_sram/SRAM1/Zz" type="logic">
+      <obj_property name="ElementShortName">Zz</obj_property>
+      <obj_property name="ObjectShortName">Zz</obj_property>
    </wvobject>
 </wave_config>
