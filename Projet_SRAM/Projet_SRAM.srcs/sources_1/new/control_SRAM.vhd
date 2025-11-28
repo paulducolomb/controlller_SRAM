@@ -86,12 +86,6 @@ begin
   begin
     case state is
 
-      when BURST_WRITE =>
-        next_state <= BURST_WRITE;
-
-      when BURST_READ =>
-        next_state <= BURST_READ;
-
       when INIT =>
         next_state <= IDLE;
 
@@ -106,7 +100,7 @@ begin
 
       when WRITE_DATA =>
         if we = '1' then
-          next_state <= WRITE_DATA;
+          next_state <= BURST_WRITE;
         elsif re = '1' then
           next_state <= READ_CAPTURE;
         else
@@ -117,10 +111,28 @@ begin
         if we = '1' then
           next_state <= WRITE_DATA;
         elsif re = '1' then
-          next_state <= READ_CAPTURE;
+          next_state <= BURST_READ;
         else
           next_state <= IDLE;
         end if;
+
+      when BURST_WRITE =>
+        if we = '1' then
+          next_state <= BURST_WRITE;
+        elsif re = '1' then
+          next_state <= READ_CAPTURE;
+        else
+          next_state <= IDLE;
+        end if;   
+
+      when BURST_READ =>
+        if we = '1' then
+          next_state <= WRITE_DATA;
+        elsif re = '1' then
+          next_state <= BURST_READ;
+        else
+          next_state <= IDLE;
+        end if;      
 
     end case;
   end process;
@@ -200,6 +212,7 @@ begin
           --Addr   <= addr_in;
           dq_t  <= '1'; --tristate
           ready <= '0';
+          
         when READ_CAPTURE =>
           Ce_n         <= '0';
           Ce2          <= '1';
