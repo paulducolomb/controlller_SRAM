@@ -31,6 +31,8 @@ use IEEE.STD_LOGIC_1164.all;
 
 library unisim;
 use unisim.VComponents.all;
+use IEEE.NUMERIC_STD.ALL;
+
 
 entity control_SRAM is
   port (
@@ -66,6 +68,8 @@ architecture Behavioral of control_SRAM is
   signal addr_reg     : std_logic_vector(18 downto 0);
   signal data_out_reg : std_logic_vector(35 downto 0);
   signal dq_out       : std_logic_vector(35 downto 0);
+  signal dq_out_r       : std_logic_vector(35 downto 0);
+  signal dq_out_2r       : std_logic_vector(35 downto 0);
   signal dq_out_late  : std_logic_vector(35 downto 0);
   signal dq_t         : std_logic := '1'; -- tri-state
   signal dq_t_late    : std_logic := '1'; 
@@ -137,28 +141,50 @@ begin
     end case;
   end process;
 
-  process (clk, reset)
-  begin
+process (clk, reset)
+begin
     if reset = '1' then
-      state        <= INIT;
-      dq_t_late    <= '0';
-      dq_out_late <= (others => '0');
-    elsif falling_edge(clk) then
-      state <= next_state;
-      
-      dq_out_late <= data_in;
-      dq_t_late <= dq_t;
-      Addr   <= addr_in;
+        state        <= INIT;
+        dq_t_late    <= '0';
+        dq_out_late  <= (others => '0');
+        addr_reg     <= (others => '0');
+        data_out_reg <= (others => '0');
 
+    elsif falling_edge(clk) then
+        state <= next_state;
+        dq_out_late <= data_in;
+        dq_t_late   <= dq_t;
+        dq_out_r <= dq_out;
+        dq_out_2r <= dq_out_r;
+
+        if (next_state = BURST_WRITE and state /= BURST_WRITE) or
+           (state = WRITE_DATA and next_state = BURST_WRITE) then
+            addr_reg <= addr_in;
+
+        elsif (next_state = BURST_READ and state /= BURST_READ) or
+              (state = READ_CAPTURE and next_state = BURST_READ) then
+            addr_reg <= addr_in;
+
+        elsif (state = BURST_WRITE) or (state = BURST_READ) then
+            addr_reg <= addr_reg;
+
+        else
+            addr_reg <= addr_in;
+        end if;
+
+        -- capture read data (behavioural: may require +1 cycle adjustment depending on model)
+        if state = READ_CAPTURE or state = BURST_READ then
+            data_out_reg <= Dq;
+        end if;
     end if;
-  end process;
+end process;
+
   
   process (state)
   begin
       case state is
 
         when INIT =>
-      addr_reg     <= (others => '0');
       dq_t         <= '1';
       Ce_n         <= '1';
       Ce2          <= '0';
@@ -229,6 +255,7 @@ begin
   end process;
   dq_out <= dq_out_late;
   data_out <= data_out_reg;
+  Addr <= addr_reg;
 
   -- bus
   --Dq <= dq_out when dq_t = '0' else (others => 'Z');
@@ -241,7 +268,7 @@ begin
       nRESET => reset,
       TRIG   => dq_t_late,
       E_S    => Dq(i),
-      ENTREE => dq_out(i)
+      ENTREE => dq_out_2r(i)
     );
   end generate;
 
