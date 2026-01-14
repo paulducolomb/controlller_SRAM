@@ -1,0 +1,166 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'control_SRAM_HLS'" level="0">
+<item name = "Date">Wed Jan 14 17:53:01 2026
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
+<item name = "Project">SRAM_hls</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu5p-flva2104-1-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 1.539 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">0, 0, 0 ns, 0 ns, 1, 1, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 75, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 265, -</column>
+<column name="Register">-, -, 63, -, -</column>
+<specialColumn name="Available SLR">1024, 1737, 600577, 300288, 235</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">2048, 3474, 1201154, 600577, 470</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="and_ln96_fu_442_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln98_fu_460_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln96_1_fu_436_p2">icmp, 0, 0, 9, 3, 4</column>
+<column name="icmp_ln96_fu_430_p2">icmp, 0, 0, 9, 3, 4</column>
+<column name="icmp_ln98_1_fu_454_p2">icmp, 0, 0, 8, 3, 3</column>
+<column name="icmp_ln98_fu_448_p2">icmp, 0, 0, 8, 3, 3</column>
+<column name="ap_condition_101">or, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_77">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln61_fu_263_p2">or, 0, 0, 2, 1, 1</column>
+<column name="select_ln61_1_fu_389_p3">select, 0, 0, 2, 1, 2</column>
+<column name="select_ln61_fu_381_p3">select, 0, 0, 3, 1, 3</column>
+<column name="select_ln62_1_fu_361_p3">select, 0, 0, 3, 1, 3</column>
+<column name="select_ln62_fu_353_p3">select, 0, 0, 4, 1, 4</column>
+<column name="select_ln63_1_fu_326_p3">select, 0, 0, 3, 1, 3</column>
+<column name="select_ln63_fu_318_p3">select, 0, 0, 3, 1, 2</column>
+<column name="select_ln64_1_fu_298_p3">select, 0, 0, 3, 1, 3</column>
+<column name="select_ln64_fu_290_p3">select, 0, 0, 4, 1, 4</column>
+<column name="select_ln65_1_fu_281_p3">select, 0, 0, 3, 1, 3</column>
+<column name="select_ln65_fu_273_p3">select, 0, 0, 3, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="Ce2">14, 3, 1, 3</column>
+<column name="Ce2_n">14, 3, 1, 3</column>
+<column name="Ce_n">14, 3, 1, 3</column>
+<column name="Dq_o">9, 2, 36, 72</column>
+<column name="Ld_n">20, 4, 1, 4</column>
+<column name="Rw_n">14, 3, 1, 3</column>
+<column name="addr_reg_V">9, 2, 19, 38</column>
+<column name="ap_phi_mux_empty_phi_fu_256_p4">14, 3, 3, 9</column>
+<column name="ap_phi_mux_storemerge1_phi_fu_235_p4">14, 3, 3, 9</column>
+<column name="ap_phi_mux_storemerge_phi_fu_244_p4">14, 3, 1, 3</column>
+<column name="ap_sig_allocacmp_addr_reg_V_load">9, 2, 19, 38</column>
+<column name="ap_sig_allocacmp_data_out_reg_V_load">9, 2, 36, 72</column>
+<column name="ap_sig_allocacmp_dq_t_load">31, 6, 1, 6</column>
+<column name="ap_sig_allocacmp_next_state_load">31, 6, 3, 18</column>
+<column name="data_out_reg_V">9, 2, 36, 72</column>
+<column name="next_state">26, 5, 3, 15</column>
+<column name="ready_r">14, 3, 1, 3</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="addr_reg_V">19, 0, 19, 0</column>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="data_out_reg_V">36, 0, 36, 0</column>
+<column name="dq_t">1, 0, 1, 0</column>
+<column name="next_state">3, 0, 3, 0</column>
+<column name="state">3, 0, 3, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_local_block">out, 1, ap_ctrl_none, control_SRAM_HLS, return value</column>
+<column name="ap_local_deadlock">out, 1, ap_ctrl_none, control_SRAM_HLS, return value</column>
+<column name="ap_clk">in, 1, ap_ctrl_none, control_SRAM_HLS, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_none, control_SRAM_HLS, return value</column>
+<column name="addr_in">in, 19, ap_none, addr_in, scalar</column>
+<column name="data_in">in, 36, ap_none, data_in, scalar</column>
+<column name="data_out">out, 36, ap_none, data_out, pointer</column>
+<column name="we">in, 1, ap_none, we, scalar</column>
+<column name="re">in, 1, ap_none, re, scalar</column>
+<column name="ready_r">out, 1, ap_none, ready_r, pointer</column>
+<column name="Addr">out, 19, ap_none, Addr, pointer</column>
+<column name="Dq_i">in, 36, ap_none, Dq, pointer</column>
+<column name="Dq_o">out, 36, ap_none, Dq, pointer</column>
+<column name="Ce_n">out, 1, ap_none, Ce_n, pointer</column>
+<column name="Ce2">out, 1, ap_none, Ce2, pointer</column>
+<column name="Ce2_n">out, 1, ap_none, Ce2_n, pointer</column>
+<column name="Oe_n">out, 1, ap_none, Oe_n, pointer</column>
+<column name="Rw_n">out, 1, ap_none, Rw_n, pointer</column>
+<column name="Ld_n">out, 1, ap_none, Ld_n, pointer</column>
+<column name="Cke_n">out, 1, ap_none, Cke_n, pointer</column>
+<column name="clk">in, 1, ap_none, clk, scalar</column>
+<column name="reset">in, 1, ap_none, reset, scalar</column>
+</table>
+</item>
+</section>
+</profile>

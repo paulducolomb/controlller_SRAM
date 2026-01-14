@@ -1,0 +1,181 @@
+
+
+================================================================
+== Vitis HLS Report for 'control_SRAM_HLS'
+================================================================
+* Date:           Wed Jan 14 17:53:01 2026
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        SRAM_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu5p-flva2104-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.539 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+--------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++---------------------+---------+------+---------+--------+-----+
+|DSP                  |        -|     -|        -|       -|    -|
+|Expression           |        -|     -|        0|      75|    -|
+|FIFO                 |        -|     -|        -|       -|    -|
+|Instance             |        -|     -|        -|       -|    -|
+|Memory               |        -|     -|        -|       -|    -|
+|Multiplexer          |        -|     -|        -|     265|    -|
+|Register             |        -|     -|       63|       -|    -|
++---------------------+---------+------+---------+--------+-----+
+|Total                |        0|     0|       63|     340|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available SLR        |     1024|  1737|   600577|  300288|  235|
++---------------------+---------+------+---------+--------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available            |     2048|  3474|  1201154|  600577|  470|
++---------------------+---------+------+---------+--------+-----+
+|Utilization (%)      |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |and_ln96_fu_442_p2       |       and|   0|  0|   2|           1|           1|
+    |and_ln98_fu_460_p2       |       and|   0|  0|   2|           1|           1|
+    |icmp_ln96_1_fu_436_p2    |      icmp|   0|  0|   9|           3|           4|
+    |icmp_ln96_fu_430_p2      |      icmp|   0|  0|   9|           3|           4|
+    |icmp_ln98_1_fu_454_p2    |      icmp|   0|  0|   8|           3|           3|
+    |icmp_ln98_fu_448_p2      |      icmp|   0|  0|   8|           3|           3|
+    |ap_condition_101         |        or|   0|  0|   2|           1|           1|
+    |ap_condition_77          |        or|   0|  0|   2|           1|           1|
+    |or_ln61_fu_263_p2        |        or|   0|  0|   2|           1|           1|
+    |select_ln61_1_fu_389_p3  |    select|   0|  0|   2|           1|           2|
+    |select_ln61_fu_381_p3    |    select|   0|  0|   3|           1|           3|
+    |select_ln62_1_fu_361_p3  |    select|   0|  0|   3|           1|           3|
+    |select_ln62_fu_353_p3    |    select|   0|  0|   4|           1|           4|
+    |select_ln63_1_fu_326_p3  |    select|   0|  0|   3|           1|           3|
+    |select_ln63_fu_318_p3    |    select|   0|  0|   3|           1|           2|
+    |select_ln64_1_fu_298_p3  |    select|   0|  0|   3|           1|           3|
+    |select_ln64_fu_290_p3    |    select|   0|  0|   4|           1|           4|
+    |select_ln65_1_fu_281_p3  |    select|   0|  0|   3|           1|           3|
+    |select_ln65_fu_273_p3    |    select|   0|  0|   3|           1|           2|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |Total                    |          |   0|  0|  75|          27|          48|
+    +-------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------+----+-----------+-----+-----------+
+    |                 Name                 | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |Ce2                                   |  14|          3|    1|          3|
+    |Ce2_n                                 |  14|          3|    1|          3|
+    |Ce_n                                  |  14|          3|    1|          3|
+    |Dq_o                                  |   9|          2|   36|         72|
+    |Ld_n                                  |  20|          4|    1|          4|
+    |Rw_n                                  |  14|          3|    1|          3|
+    |addr_reg_V                            |   9|          2|   19|         38|
+    |ap_phi_mux_empty_phi_fu_256_p4        |  14|          3|    3|          9|
+    |ap_phi_mux_storemerge1_phi_fu_235_p4  |  14|          3|    3|          9|
+    |ap_phi_mux_storemerge_phi_fu_244_p4   |  14|          3|    1|          3|
+    |ap_sig_allocacmp_addr_reg_V_load      |   9|          2|   19|         38|
+    |ap_sig_allocacmp_data_out_reg_V_load  |   9|          2|   36|         72|
+    |ap_sig_allocacmp_dq_t_load            |  31|          6|    1|          6|
+    |ap_sig_allocacmp_next_state_load      |  31|          6|    3|         18|
+    |data_out_reg_V                        |   9|          2|   36|         72|
+    |next_state                            |  26|          5|    3|         15|
+    |ready_r                               |  14|          3|    1|          3|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |Total                                 | 265|         55|  166|        371|
+    +--------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+----+----+-----+-----------+
+    |      Name      | FF | LUT| Bits| Const Bits|
+    +----------------+----+----+-----+-----------+
+    |addr_reg_V      |  19|   0|   19|          0|
+    |ap_CS_fsm       |   1|   0|    1|          0|
+    |data_out_reg_V  |  36|   0|   36|          0|
+    |dq_t            |   1|   0|    1|          0|
+    |next_state      |   3|   0|    3|          0|
+    |state           |   3|   0|    3|          0|
+    +----------------+----+----+-----+-----------+
+    |Total           |  63|   0|   63|          0|
+    +----------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+--------------+------------------+--------------+
+|     RTL Ports     | Dir | Bits|   Protocol   |   Source Object  |    C Type    |
++-------------------+-----+-----+--------------+------------------+--------------+
+|ap_local_block     |  out|    1|  ap_ctrl_none|  control_SRAM_HLS|  return value|
+|ap_local_deadlock  |  out|    1|  ap_ctrl_none|  control_SRAM_HLS|  return value|
+|ap_clk             |   in|    1|  ap_ctrl_none|  control_SRAM_HLS|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_none|  control_SRAM_HLS|  return value|
+|addr_in            |   in|   19|       ap_none|           addr_in|        scalar|
+|data_in            |   in|   36|       ap_none|           data_in|        scalar|
+|data_out           |  out|   36|       ap_none|          data_out|       pointer|
+|we                 |   in|    1|       ap_none|                we|        scalar|
+|re                 |   in|    1|       ap_none|                re|        scalar|
+|ready_r            |  out|    1|       ap_none|           ready_r|       pointer|
+|Addr               |  out|   19|       ap_none|              Addr|       pointer|
+|Dq_i               |   in|   36|       ap_none|                Dq|       pointer|
+|Dq_o               |  out|   36|       ap_none|                Dq|       pointer|
+|Ce_n               |  out|    1|       ap_none|              Ce_n|       pointer|
+|Ce2                |  out|    1|       ap_none|               Ce2|       pointer|
+|Ce2_n              |  out|    1|       ap_none|             Ce2_n|       pointer|
+|Oe_n               |  out|    1|       ap_none|              Oe_n|       pointer|
+|Rw_n               |  out|    1|       ap_none|              Rw_n|       pointer|
+|Ld_n               |  out|    1|       ap_none|              Ld_n|       pointer|
+|Cke_n              |  out|    1|       ap_none|             Cke_n|       pointer|
+|clk                |   in|    1|       ap_none|               clk|        scalar|
+|reset              |   in|    1|       ap_none|             reset|        scalar|
++-------------------+-----+-----+--------------+------------------+--------------+
+

@@ -1,0 +1,774 @@
+<profile>
+    <ReportVersion>
+        <Version>2021.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcvu5p-flva2104-1-e</Part>
+        <TopModelName>control_SRAM_HLS</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>1.539</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>0</Best-caseLatency>
+            <Average-caseLatency>0</Average-caseLatency>
+            <Worst-caseLatency>0</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+            <Interval-min>1</Interval-min>
+            <Interval-max>1</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <FF>63</FF>
+            <LUT>340</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>2048</BRAM_18K>
+            <DSP>3474</DSP>
+            <FF>1201154</FF>
+            <LUT>600577</LUT>
+            <URAM>470</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_local_block</name>
+            <Object>control_SRAM_HLS</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_local_deadlock</name>
+            <Object>control_SRAM_HLS</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>control_SRAM_HLS</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>control_SRAM_HLS</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>addr_in</name>
+            <Object>addr_in</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>19</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>data_in</name>
+            <Object>data_in</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>36</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>data_out</name>
+            <Object>data_out</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>36</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>we</name>
+            <Object>we</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>re</name>
+            <Object>re</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ready_r</name>
+            <Object>ready_r</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Addr</name>
+            <Object>Addr</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>19</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Dq_i</name>
+            <Object>Dq</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>36</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Dq_o</name>
+            <Object>Dq</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>36</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Ce_n</name>
+            <Object>Ce_n</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Ce2</name>
+            <Object>Ce2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Ce2_n</name>
+            <Object>Ce2_n</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Oe_n</name>
+            <Object>Oe_n</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Rw_n</name>
+            <Object>Rw_n</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Ld_n</name>
+            <Object>Ld_n</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Cke_n</name>
+            <Object>Cke_n</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>clk</name>
+            <Object>clk</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>reset</name>
+            <Object>reset</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="1">
+            <ModuleName>control_SRAM_HLS</ModuleName>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>control_SRAM_HLS</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.539</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>63</FF>
+                    <AVAIL_FF>1201154</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>340</LUT>
+                    <AVAIL_LUT>600577</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>2048</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>3474</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>470</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="addr_in" index="0" direction="in" srcType="ap_uint&lt;19&gt;" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="addr_in" name="addr_in" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="data_in" index="1" direction="in" srcType="ap_uint&lt;36&gt;" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="data_in" name="data_in" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="data_out" index="2" direction="out" srcType="ap_uint&lt;36&gt;&amp;" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="data_out" name="data_out" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="we" index="3" direction="in" srcType="bool" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="we" name="we" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="re" index="4" direction="in" srcType="bool" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="re" name="re" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="ready" index="5" direction="out" srcType="bool&amp;" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="ready_r" name="ready_r" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="Addr" index="6" direction="out" srcType="ap_uint&lt;19&gt;&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="Addr" name="Addr" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="Dq" index="7" direction="inout" srcType="ap_uint&lt;36&gt;&amp;" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="Dq_i" name="Dq_i" usage="data" direction="in"/>
+                <hwRef type="port" interface="Dq_o" name="Dq_o" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="Ce_n" index="8" direction="out" srcType="bool&amp;" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="Ce_n" name="Ce_n" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="Ce2" index="9" direction="out" srcType="bool&amp;" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="Ce2" name="Ce2" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="Ce2_n" index="10" direction="out" srcType="bool&amp;" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="Ce2_n" name="Ce2_n" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="Oe_n" index="11" direction="out" srcType="bool&amp;" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="Oe_n" name="Oe_n" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="Rw_n" index="12" direction="out" srcType="bool&amp;" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="Rw_n" name="Rw_n" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="Ld_n" index="13" direction="out" srcType="bool&amp;" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="Ld_n" name="Ld_n" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="Cke_n" index="14" direction="out" srcType="bool&amp;" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="Cke_n" name="Cke_n" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="clk" index="15" direction="in" srcType="bool" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="clk" name="clk" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="reset" index="16" direction="in" srcType="bool" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="reset" name="reset" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="addr_in" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="19">
+            <portMaps>
+                <portMap portMapName="addr_in">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>addr_in</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="addr_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="data_in" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="36">
+            <portMaps>
+                <portMap portMapName="data_in">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>data_in</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="data_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="data_out" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="36">
+            <portMaps>
+                <portMap portMapName="data_out">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>data_out</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="data_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="we" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="we">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>we</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="we"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="re" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="re">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>re</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="re"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="ready_r" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="ready_r">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>ready_r</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="ready"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="Addr" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="19">
+            <portMaps>
+                <portMap portMapName="Addr">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>Addr</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="Addr"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="Dq_i" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="36">
+            <portMaps>
+                <portMap portMapName="Dq_i">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>Dq_i</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="Dq"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="Dq_o" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="36">
+            <portMaps>
+                <portMap portMapName="Dq_o">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>Dq_o</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="Dq"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="Ce_n" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="Ce_n">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>Ce_n</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="Ce_n"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="Ce2" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="Ce2">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>Ce2</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="Ce2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="Ce2_n" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="Ce2_n">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>Ce2_n</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="Ce2_n"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="Oe_n" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="Oe_n">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>Oe_n</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="Oe_n"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="Rw_n" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="Rw_n">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>Rw_n</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="Rw_n"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="Ld_n" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="Ld_n">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>Ld_n</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="Ld_n"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="Cke_n" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="Cke_n">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>Cke_n</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="Cke_n"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="clk" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="clk">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>clk</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="clk"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="reset" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="reset">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>reset</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="reset"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="REGISTER">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="Addr">ap_none, 19</column>
+                    <column name="Ce2">ap_none, 1</column>
+                    <column name="Ce2_n">ap_none, 1</column>
+                    <column name="Ce_n">ap_none, 1</column>
+                    <column name="Cke_n">ap_none, 1</column>
+                    <column name="Dq_i">ap_none, 36</column>
+                    <column name="Dq_o">ap_none, 36</column>
+                    <column name="Ld_n">ap_none, 1</column>
+                    <column name="Oe_n">ap_none, 1</column>
+                    <column name="Rw_n">ap_none, 1</column>
+                    <column name="addr_in">ap_none, 19</column>
+                    <column name="clk">ap_none, 1</column>
+                    <column name="data_in">ap_none, 36</column>
+                    <column name="data_out">ap_none, 36</column>
+                    <column name="re">ap_none, 1</column>
+                    <column name="ready_r">ap_none, 1</column>
+                    <column name="reset">ap_none, 1</column>
+                    <column name="we">ap_none, 1</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_none</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="addr_in">in, ap_uint&lt;19&gt;</column>
+                    <column name="data_in">in, ap_uint&lt;36&gt;</column>
+                    <column name="data_out">out, ap_uint&lt;36&gt;&amp;</column>
+                    <column name="we">in, bool</column>
+                    <column name="re">in, bool</column>
+                    <column name="ready">out, bool&amp;</column>
+                    <column name="Addr">out, ap_uint&lt;19&gt;&amp;</column>
+                    <column name="Dq">inout, ap_uint&lt;36&gt;&amp;</column>
+                    <column name="Ce_n">out, bool&amp;</column>
+                    <column name="Ce2">out, bool&amp;</column>
+                    <column name="Ce2_n">out, bool&amp;</column>
+                    <column name="Oe_n">out, bool&amp;</column>
+                    <column name="Rw_n">out, bool&amp;</column>
+                    <column name="Ld_n">out, bool&amp;</column>
+                    <column name="Cke_n">out, bool&amp;</column>
+                    <column name="clk">in, bool</column>
+                    <column name="reset">in, bool</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="addr_in">addr_in, port</column>
+                    <column name="data_in">data_in, port</column>
+                    <column name="data_out">data_out, port</column>
+                    <column name="we">we, port</column>
+                    <column name="re">re, port</column>
+                    <column name="ready">ready_r, port</column>
+                    <column name="Addr">Addr, port</column>
+                    <column name="Dq">Dq_i, port</column>
+                    <column name="Dq">Dq_o, port</column>
+                    <column name="Ce_n">Ce_n, port</column>
+                    <column name="Ce2">Ce2, port</column>
+                    <column name="Ce2_n">Ce2_n, port</column>
+                    <column name="Oe_n">Oe_n, port</column>
+                    <column name="Rw_n">Rw_n, port</column>
+                    <column name="Ld_n">Ld_n, port</column>
+                    <column name="Cke_n">Cke_n, port</column>
+                    <column name="clk">clk, port</column>
+                    <column name="reset">reset, port</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:26" status="valid" parentFunction="control_sram_hls" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:27" status="valid" parentFunction="control_sram_hls" variable="addr_in" isDirective="0" options="ap_none port=addr_in"/>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:28" status="valid" parentFunction="control_sram_hls" variable="data_in" isDirective="0" options="ap_none port=data_in"/>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:29" status="valid" parentFunction="control_sram_hls" variable="data_out" isDirective="0" options="ap_none port=data_out"/>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:30" status="valid" parentFunction="control_sram_hls" variable="we" isDirective="0" options="ap_none port=we"/>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:31" status="valid" parentFunction="control_sram_hls" variable="re" isDirective="0" options="ap_none port=re"/>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:32" status="valid" parentFunction="control_sram_hls" variable="ready" isDirective="0" options="ap_none port=ready"/>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:33" status="valid" parentFunction="control_sram_hls" variable="Addr" isDirective="0" options="ap_none port=Addr"/>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:34" status="valid" parentFunction="control_sram_hls" variable="Dq" isDirective="0" options="ap_none port=Dq"/>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:35" status="valid" parentFunction="control_sram_hls" variable="Ce_n" isDirective="0" options="ap_none port=Ce_n"/>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:36" status="valid" parentFunction="control_sram_hls" variable="Ce2" isDirective="0" options="ap_none port=Ce2"/>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:37" status="valid" parentFunction="control_sram_hls" variable="Ce2_n" isDirective="0" options="ap_none port=Ce2_n"/>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:38" status="valid" parentFunction="control_sram_hls" variable="Oe_n" isDirective="0" options="ap_none port=Oe_n"/>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:39" status="valid" parentFunction="control_sram_hls" variable="Rw_n" isDirective="0" options="ap_none port=Rw_n"/>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:40" status="valid" parentFunction="control_sram_hls" variable="Ld_n" isDirective="0" options="ap_none port=Ld_n"/>
+        <Pragma type="interface" location="control_SRAM_HLS.cpp:41" status="valid" parentFunction="control_sram_hls" variable="Cke_n" isDirective="0" options="ap_none port=Cke_n"/>
+    </PragmaReport>
+</profile>
+

@@ -1,0 +1,26 @@
+#include "hls_design_meta.h"
+const Port_Property HLS_Design_Meta::port_props[]={
+	Port_Property("ap_local_block", 1, hls_out, -1, "", "", 1),
+	Port_Property("ap_local_deadlock", 1, hls_out, -1, "", "", 1),
+	Port_Property("ap_clk", 1, hls_in, -1, "", "", 1),
+	Port_Property("ap_rst", 1, hls_in, -1, "", "", 1),
+	Port_Property("addr_in", 19, hls_in, 0, "ap_none", "in_data", 1),
+	Port_Property("data_in", 36, hls_in, 1, "ap_none", "in_data", 1),
+	Port_Property("data_out", 36, hls_out, 2, "ap_none", "out_data", 1),
+	Port_Property("we", 1, hls_in, 3, "ap_none", "in_data", 1),
+	Port_Property("re", 1, hls_in, 4, "ap_none", "in_data", 1),
+	Port_Property("ready_r", 1, hls_out, 5, "ap_none", "out_data", 1),
+	Port_Property("Addr", 19, hls_out, 6, "ap_none", "out_data", 1),
+	Port_Property("Dq_i", 36, hls_in, 7, "ap_none", "in_data", 1),
+	Port_Property("Dq_o", 36, hls_out, 7, "ap_none", "out_data", 1),
+	Port_Property("Ce_n", 1, hls_out, 8, "ap_none", "out_data", 1),
+	Port_Property("Ce2", 1, hls_out, 9, "ap_none", "out_data", 1),
+	Port_Property("Ce2_n", 1, hls_out, 10, "ap_none", "out_data", 1),
+	Port_Property("Oe_n", 1, hls_out, 11, "ap_none", "out_data", 1),
+	Port_Property("Rw_n", 1, hls_out, 12, "ap_none", "out_data", 1),
+	Port_Property("Ld_n", 1, hls_out, 13, "ap_none", "out_data", 1),
+	Port_Property("Cke_n", 1, hls_out, 14, "ap_none", "out_data", 1),
+	Port_Property("clk", 1, hls_in, 15, "ap_none", "in_data", 1),
+	Port_Property("reset", 1, hls_in, 16, "ap_none", "in_data", 1),
+};
+const char* HLS_Design_Meta::dut_name = "control_SRAM_HLS";

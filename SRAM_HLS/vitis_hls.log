@@ -1,0 +1,106 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'pauld' on host 'zenbook_de_paul' (Windows NT_amd64 version 6.2) on Wed Jan 14 17:52:43 +0100 2026
+INFO: [HLS 200-10] In directory 'C:/Users/pauld/controlller_SRAM/SRAM_HLS'
+Sourcing Tcl script 'C:/Users/pauld/controlller_SRAM/SRAM_HLS/SRAM_hls/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project SRAM_hls 
+INFO: [HLS 200-10] Opening project 'C:/Users/pauld/controlller_SRAM/SRAM_HLS/SRAM_hls'.
+INFO: [HLS 200-1510] Running: set_top control_SRAM_HLS 
+INFO: [HLS 200-1510] Running: add_files control_SRAM_HLS.cpp 
+INFO: [HLS 200-10] Adding design file 'control_SRAM_HLS.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb_control_SRAM.cpp 
+INFO: [HLS 200-10] Adding test bench file 'tb_control_SRAM.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/pauld/controlller_SRAM/SRAM_HLS/SRAM_hls/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu5p-flva2104-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu5p-flva2104-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.033 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-10] Analyzing design file 'control_SRAM_HLS.cpp' ... 
+WARNING: [HLS 207-5287] unused parameter 'clk' (control_SRAM_HLS.cpp:22:10)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 6.417 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'ap_uint<19>::ap_uint(int)' into 'control_SRAM_HLS(ap_uint<19>, ap_uint<36>, ap_uint<36>&, bool, bool, bool&, ap_uint<19>&, ap_uint<36>&, bool&, bool&, bool&, bool&, bool&, bool&, bool&, bool, bool)' (control_SRAM_HLS.cpp:45:35)
+INFO: [HLS 214-131] Inlining function 'ap_uint<36>::ap_uint(int)' into 'control_SRAM_HLS(ap_uint<19>, ap_uint<36>, ap_uint<36>&, bool, bool, bool&, ap_uint<19>&, ap_uint<36>&, bool&, bool&, bool&, bool&, bool&, bool&, bool&, bool, bool)' (control_SRAM_HLS.cpp:54:24)
+INFO: [HLS 214-131] Inlining function 'ap_uint<19>::ap_uint(int)' into 'control_SRAM_HLS(ap_uint<19>, ap_uint<36>, ap_uint<36>&, bool, bool, bool&, ap_uint<19>&, ap_uint<36>&, bool&, bool&, bool&, bool&, bool&, bool&, bool&, bool, bool)' (control_SRAM_HLS.cpp:53:20)
+INFO: [HLS 214-131] Inlining function 'ap_uint<36>::ap_uint(int)' into 'control_SRAM_HLS(ap_uint<19>, ap_uint<36>, ap_uint<36>&, bool, bool, bool&, ap_uint<19>&, ap_uint<36>&, bool&, bool&, bool&, bool&, bool&, bool&, bool&, bool, bool)' (control_SRAM_HLS.cpp:47:38)
+INFO: [HLS 214-131] Inlining function 'ap_uint<36>::ap_uint(int)' into 'control_SRAM_HLS(ap_uint<19>, ap_uint<36>, ap_uint<36>&, bool, bool, bool&, ap_uint<19>&, ap_uint<36>&, bool&, bool&, bool&, bool&, bool&, bool&, bool&, bool, bool)' (control_SRAM_HLS.cpp:46:39)
+INFO: [HLS 214-241] Aggregating scalar variable 'Dq' with compact=bit mode in 36-bits (control_SRAM_HLS.cpp:25:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'Addr' with compact=bit mode in 19-bits (control_SRAM_HLS.cpp:25:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'data_out' with compact=bit mode in 36-bits (control_SRAM_HLS.cpp:25:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.036 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.102 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'control_SRAM_HLS' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'control_SRAM_HLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.294 seconds; current allocated memory: 1.167 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'control_SRAM_HLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/addr_in' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/data_in' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/data_out' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'data_out' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/we' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/re' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/ready_r' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'ready_r' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/Addr' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'Addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/Dq' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'Dq' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/Ce_n' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'Ce_n' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/Ce2' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'Ce2' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/Ce2_n' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'Ce2_n' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/Oe_n' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'Oe_n' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/Rw_n' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'Rw_n' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/Ld_n' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'Ld_n' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/Cke_n' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'Cke_n' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/clk' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'control_SRAM_HLS/reset' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'control_SRAM_HLS' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'next_state' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'addr_reg_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data_out_reg_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'dq_t' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'state' is power-on initialization.
+WARNING: [RTGEN 206-101] Port 'control_SRAM_HLS/clk' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'control_SRAM_HLS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.44 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.677 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.497 seconds; current allocated memory: 1.167 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for control_SRAM_HLS.
+INFO: [VLOG 209-307] Generating Verilog RTL for control_SRAM_HLS.
+INFO: [HLS 200-789] **** Estimated Fmax: 649.59 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 14.854 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 22.01 seconds; peak allocated memory: 1.167 GB.

@@ -1,0 +1,26 @@
+<pragmas>
+<pragma file="C:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_common.h" line="524" pragmaType="inline" parentfunction="ssdm_int<36, false>::ssdm_int()" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h" line="734" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h" line="734" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_common.h" line="524" pragmaType="inline" parentfunction="ssdm_int<19, false>::ssdm_int()" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h" line="221" pragmaType="inline" parentfunction="ap_int_base<19, false>::ap_int_base()" off="0" region="0" recursive="0"/>
+<pragma file="control_SRAM_HLS.cpp" line="25" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="control_SRAM_HLS.cpp" line="26" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_none" port="addr_in" name="" register="0"/>
+<pragma file="control_SRAM_HLS.cpp" line="27" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_none" port="data_in" name="" register="0"/>
+<pragma file="control_SRAM_HLS.cpp" line="28" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_none" port="data_out" name="" register="0"/>
+<pragma file="control_SRAM_HLS.cpp" line="29" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_none" port="we" name="" register="0"/>
+<pragma file="control_SRAM_HLS.cpp" line="30" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_none" port="re" name="" register="0"/>
+<pragma file="control_SRAM_HLS.cpp" line="31" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_none" port="ready" name="" register="0"/>
+<pragma file="control_SRAM_HLS.cpp" line="32" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_none" port="Addr" name="" register="0"/>
+<pragma file="control_SRAM_HLS.cpp" line="33" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_none" port="Dq" name="" register="0"/>
+<pragma file="control_SRAM_HLS.cpp" line="34" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_none" port="Ce_n" name="" register="0"/>
+<pragma file="control_SRAM_HLS.cpp" line="35" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_none" port="Ce2" name="" register="0"/>
+<pragma file="control_SRAM_HLS.cpp" line="36" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_none" port="Ce2_n" name="" register="0"/>
+<pragma file="control_SRAM_HLS.cpp" line="37" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_none" port="Oe_n" name="" register="0"/>
+<pragma file="control_SRAM_HLS.cpp" line="38" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_none" port="Rw_n" name="" register="0"/>
+<pragma file="control_SRAM_HLS.cpp" line="39" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_none" port="Ld_n" name="" register="0"/>
+<pragma file="control_SRAM_HLS.cpp" line="40" pragmaType="interface" parentfunction="control_SRAM_HLS" mode="ap_none" port="Cke_n" name="" register="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h" line="221" pragmaType="inline" parentfunction="ap_int_base<36, false>::ap_int_base()" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int.h" line="321" pragmaType="inline" parentfunction="ap_uint<19>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int.h" line="321" pragmaType="inline" parentfunction="ap_uint<36>::ap_uint(int)" off="0" region="0" recursive="0"/>
+</pragmas>

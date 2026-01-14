@@ -1,0 +1,156 @@
+
+
+================================================================
+== Synthesis Summary Report of 'control_SRAM_HLS'
+================================================================
++ General Information: 
+    * Date:           Wed Jan 14 17:53:01 2026
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        SRAM_hls
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu5p-flva2104-1-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------+------+------+---------+--------+----------+---------+------+----------+------+----+----------+-----------+-----+
+    |       Modules      | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |          |           |     |
+    |       & Loops      | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|    FF    |    LUT    | URAM|
+    +--------------------+------+------+---------+--------+----------+---------+------+----------+------+----+----------+-----------+-----+
+    |+ control_SRAM_HLS  |     -|  5.76|        0|   0.000|         -|        1|     -|        no|     -|   -|  63 (~0%)|  340 (~0%)|    -|
+    +--------------------+------+------+---------+--------+----------+---------+------+----------+------+----+----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* REGISTER
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| Addr      | ap_none | 19       |
+| Ce2       | ap_none | 1        |
+| Ce2_n     | ap_none | 1        |
+| Ce_n      | ap_none | 1        |
+| Cke_n     | ap_none | 1        |
+| Dq_i      | ap_none | 36       |
+| Dq_o      | ap_none | 36       |
+| Ld_n      | ap_none | 1        |
+| Oe_n      | ap_none | 1        |
+| Rw_n      | ap_none | 1        |
+| addr_in   | ap_none | 19       |
+| clk       | ap_none | 1        |
+| data_in   | ap_none | 36       |
+| data_out  | ap_none | 36       |
+| re        | ap_none | 1        |
+| ready_r   | ap_none | 1        |
+| reset     | ap_none | 1        |
+| we        | ap_none | 1        |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+--------+
+| Interface | Type         | Ports  |
++-----------+--------------+--------+
+| ap_clk    | clock        | ap_clk |
+| ap_rst    | reset        | ap_rst |
+| ap_ctrl   | ap_ctrl_none |        |
++-----------+--------------+--------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------+
+| Argument | Direction | Datatype     |
++----------+-----------+--------------+
+| addr_in  | in        | ap_uint<19>  |
+| data_in  | in        | ap_uint<36>  |
+| data_out | out       | ap_uint<36>& |
+| we       | in        | bool         |
+| re       | in        | bool         |
+| ready    | out       | bool&        |
+| Addr     | out       | ap_uint<19>& |
+| Dq       | inout     | ap_uint<36>& |
+| Ce_n     | out       | bool&        |
+| Ce2      | out       | bool&        |
+| Ce2_n    | out       | bool&        |
+| Oe_n     | out       | bool&        |
+| Rw_n     | out       | bool&        |
+| Ld_n     | out       | bool&        |
+| Cke_n    | out       | bool&        |
+| clk      | in        | bool         |
+| reset    | in        | bool         |
++----------+-----------+--------------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+
+| Argument | HW Interface | HW Type |
++----------+--------------+---------+
+| addr_in  | addr_in      | port    |
+| data_in  | data_in      | port    |
+| data_out | data_out     | port    |
+| we       | we           | port    |
+| re       | re           | port    |
+| ready    | ready_r      | port    |
+| Addr     | Addr         | port    |
+| Dq       | Dq_i         | port    |
+| Dq       | Dq_o         | port    |
+| Ce_n     | Ce_n         | port    |
+| Ce2      | Ce2          | port    |
+| Ce2_n    | Ce2_n        | port    |
+| Oe_n     | Oe_n         | port    |
+| Rw_n     | Rw_n         | port    |
+| Ld_n     | Ld_n         | port    |
+| Cke_n    | Cke_n        | port    |
+| clk      | clk          | port    |
+| reset    | reset        | port    |
++----------+--------------+---------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
+  No bind op info in design
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------+-------------------------------------------------------+
+| Type      | Options                  | Location                                              |
++-----------+--------------------------+-------------------------------------------------------+
+| interface | ap_ctrl_none port=return | control_SRAM_HLS.cpp:26 in control_sram_hls, return   |
+| interface | ap_none port=addr_in     | control_SRAM_HLS.cpp:27 in control_sram_hls, addr_in  |
+| interface | ap_none port=data_in     | control_SRAM_HLS.cpp:28 in control_sram_hls, data_in  |
+| interface | ap_none port=data_out    | control_SRAM_HLS.cpp:29 in control_sram_hls, data_out |
+| interface | ap_none port=we          | control_SRAM_HLS.cpp:30 in control_sram_hls, we       |
+| interface | ap_none port=re          | control_SRAM_HLS.cpp:31 in control_sram_hls, re       |
+| interface | ap_none port=ready       | control_SRAM_HLS.cpp:32 in control_sram_hls, ready    |
+| interface | ap_none port=Addr        | control_SRAM_HLS.cpp:33 in control_sram_hls, Addr     |
+| interface | ap_none port=Dq          | control_SRAM_HLS.cpp:34 in control_sram_hls, Dq       |
+| interface | ap_none port=Ce_n        | control_SRAM_HLS.cpp:35 in control_sram_hls, Ce_n     |
+| interface | ap_none port=Ce2         | control_SRAM_HLS.cpp:36 in control_sram_hls, Ce2      |
+| interface | ap_none port=Ce2_n       | control_SRAM_HLS.cpp:37 in control_sram_hls, Ce2_n    |
+| interface | ap_none port=Oe_n        | control_SRAM_HLS.cpp:38 in control_sram_hls, Oe_n     |
+| interface | ap_none port=Rw_n        | control_SRAM_HLS.cpp:39 in control_sram_hls, Rw_n     |
+| interface | ap_none port=Ld_n        | control_SRAM_HLS.cpp:40 in control_sram_hls, Ld_n     |
+| interface | ap_none port=Cke_n       | control_SRAM_HLS.cpp:41 in control_sram_hls, Cke_n    |
++-----------+--------------------------+-------------------------------------------------------+
+
+

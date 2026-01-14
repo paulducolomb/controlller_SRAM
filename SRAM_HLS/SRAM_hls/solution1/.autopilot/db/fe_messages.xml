@@ -1,0 +1,90 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:22:10" msg_body="unused parameter 'clk'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_ref.h:718:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_ref.h:732:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_ref.h:746:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=control_SRAM_HLS" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:27:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=addr_in" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:28:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=data_in" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=data_out" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:30:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=we" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:31:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=re" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:32:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=ready" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=Addr" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=Dq" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=Ce_n" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=Ce2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=Ce2_n" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=Oe_n" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:39:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=Rw_n" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:40:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=Ld_n" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="control_SRAM_HLS.cpp:41:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="control_SRAM_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=Cke_n" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="control_SRAM_HLS.cpp:45:35" msg_body="Inlining function 'ap_uint&lt;19&gt;::ap_uint(int)' into 'control_SRAM_HLS(ap_uint&lt;19&gt;, ap_uint&lt;36&gt;, ap_uint&lt;36&gt;&amp;, bool, bool, bool&amp;, ap_uint&lt;19&gt;&amp;, ap_uint&lt;36&gt;&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool, bool)'">
+        <args Callee="ap_uint&lt;19&gt;::ap_uint(int)" Caller="control_SRAM_HLS(ap_uint&lt;19&gt;, ap_uint&lt;36&gt;, ap_uint&lt;36&gt;&amp;, bool, bool, bool&amp;, ap_uint&lt;19&gt;&amp;, ap_uint&lt;36&gt;&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool, bool)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="control_SRAM_HLS.cpp:54:24" msg_body="Inlining function 'ap_uint&lt;36&gt;::ap_uint(int)' into 'control_SRAM_HLS(ap_uint&lt;19&gt;, ap_uint&lt;36&gt;, ap_uint&lt;36&gt;&amp;, bool, bool, bool&amp;, ap_uint&lt;19&gt;&amp;, ap_uint&lt;36&gt;&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool, bool)'">
+        <args Callee="ap_uint&lt;36&gt;::ap_uint(int)" Caller="control_SRAM_HLS(ap_uint&lt;19&gt;, ap_uint&lt;36&gt;, ap_uint&lt;36&gt;&amp;, bool, bool, bool&amp;, ap_uint&lt;19&gt;&amp;, ap_uint&lt;36&gt;&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool, bool)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="control_SRAM_HLS.cpp:53:20" msg_body="Inlining function 'ap_uint&lt;19&gt;::ap_uint(int)' into 'control_SRAM_HLS(ap_uint&lt;19&gt;, ap_uint&lt;36&gt;, ap_uint&lt;36&gt;&amp;, bool, bool, bool&amp;, ap_uint&lt;19&gt;&amp;, ap_uint&lt;36&gt;&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool, bool)'">
+        <args Callee="ap_uint&lt;19&gt;::ap_uint(int)" Caller="control_SRAM_HLS(ap_uint&lt;19&gt;, ap_uint&lt;36&gt;, ap_uint&lt;36&gt;&amp;, bool, bool, bool&amp;, ap_uint&lt;19&gt;&amp;, ap_uint&lt;36&gt;&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool, bool)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="control_SRAM_HLS.cpp:47:38" msg_body="Inlining function 'ap_uint&lt;36&gt;::ap_uint(int)' into 'control_SRAM_HLS(ap_uint&lt;19&gt;, ap_uint&lt;36&gt;, ap_uint&lt;36&gt;&amp;, bool, bool, bool&amp;, ap_uint&lt;19&gt;&amp;, ap_uint&lt;36&gt;&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool, bool)'">
+        <args Callee="ap_uint&lt;36&gt;::ap_uint(int)" Caller="control_SRAM_HLS(ap_uint&lt;19&gt;, ap_uint&lt;36&gt;, ap_uint&lt;36&gt;&amp;, bool, bool, bool&amp;, ap_uint&lt;19&gt;&amp;, ap_uint&lt;36&gt;&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool, bool)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="control_SRAM_HLS.cpp:46:39" msg_body="Inlining function 'ap_uint&lt;36&gt;::ap_uint(int)' into 'control_SRAM_HLS(ap_uint&lt;19&gt;, ap_uint&lt;36&gt;, ap_uint&lt;36&gt;&amp;, bool, bool, bool&amp;, ap_uint&lt;19&gt;&amp;, ap_uint&lt;36&gt;&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool, bool)'">
+        <args Callee="ap_uint&lt;36&gt;::ap_uint(int)" Caller="control_SRAM_HLS(ap_uint&lt;19&gt;, ap_uint&lt;36&gt;, ap_uint&lt;36&gt;&amp;, bool, bool, bool&amp;, ap_uint&lt;19&gt;&amp;, ap_uint&lt;36&gt;&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool&amp;, bool, bool)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="control_SRAM_HLS.cpp:25:0" msg_body="Aggregating scalar variable 'Dq' with compact=bit mode in 36-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="36" HwTyName="scalar" Name="Dq"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="control_SRAM_HLS.cpp:25:0" msg_body="Aggregating scalar variable 'Addr' with compact=bit mode in 19-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="19" HwTyName="scalar" Name="Addr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="control_SRAM_HLS.cpp:25:0" msg_body="Aggregating scalar variable 'data_out' with compact=bit mode in 36-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="36" HwTyName="scalar" Name="data_out"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

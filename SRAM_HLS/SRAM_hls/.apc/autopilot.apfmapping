@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="control_SRAM_HLS.cpp" path="C:\Users\pauld\controlller_SRAM\SRAM_HLS\control_SRAM_HLS.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_control_SRAM.cpp" path="C:\Users\pauld\controlller_SRAM\SRAM_HLS\tb_control_SRAM.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

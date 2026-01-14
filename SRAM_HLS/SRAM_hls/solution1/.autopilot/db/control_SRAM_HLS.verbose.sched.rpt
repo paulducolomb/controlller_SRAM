@@ -1,0 +1,250 @@
+
+
+================================================================
+== Vitis HLS Report for 'control_SRAM_HLS'
+================================================================
+* Date:           Wed Jan 14 17:53:00 2026
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        SRAM_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu5p-flva2104-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.539 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.53>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2"   --->   Operation 2 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 3 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i19 %addr_in"   --->   Operation 4 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i19 %addr_in, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i36 %data_in"   --->   Operation 6 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i36 %data_in, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i36 %data_out"   --->   Operation 8 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i36 %data_out, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %we"   --->   Operation 10 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %we, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %re"   --->   Operation 12 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %re, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %ready_r"   --->   Operation 14 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %ready_r, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i19 %Addr"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i19 %Addr, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i36 %Dq"   --->   Operation 18 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i36 %Dq, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %Ce_n"   --->   Operation 20 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %Ce_n, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %Ce2"   --->   Operation 22 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %Ce2, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %Ce2_n"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %Ce2_n, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %Oe_n"   --->   Operation 26 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %Oe_n, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %Rw_n"   --->   Operation 28 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %Rw_n, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %Ld_n"   --->   Operation 30 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %Ld_n, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %Cke_n"   --->   Operation 32 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %Cke_n, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %clk"   --->   Operation 34 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %clk, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %reset"   --->   Operation 36 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %reset, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%reset_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %reset" [control_SRAM_HLS.cpp:6]   --->   Operation 38 'read' 'reset_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%re_read = read i1 @_ssdm_op_Read.ap_none.i1, i1 %re" [control_SRAM_HLS.cpp:6]   --->   Operation 39 'read' 're_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%we_read = read i1 @_ssdm_op_Read.ap_none.i1, i1 %we" [control_SRAM_HLS.cpp:6]   --->   Operation 40 'read' 'we_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%data_in_read = read i36 @_ssdm_op_Read.ap_none.i36, i36 %data_in" [control_SRAM_HLS.cpp:6]   --->   Operation 41 'read' 'data_in_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%addr_in_read = read i19 @_ssdm_op_Read.ap_none.i19, i19 %addr_in" [control_SRAM_HLS.cpp:6]   --->   Operation 42 'read' 'addr_in_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.14ns)   --->   "%or_ln61 = or i1 %we_read, i1 %re_read" [control_SRAM_HLS.cpp:61]   --->   Operation 43 'or' 'or_ln61' <Predicate = true> <Delay = 0.14> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.14> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln50 = br i1 %reset_read, void, void" [control_SRAM_HLS.cpp:50]   --->   Operation 44 'br' 'br_ln50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%state_load = load i3 %state" [control_SRAM_HLS.cpp:59]   --->   Operation 45 'load' 'state_load' <Predicate = (!reset_read)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.72ns)   --->   "%switch_ln59 = switch i3 %state_load, void %._crit_edge, i3 1, void, i3 0, void, i3 2, void, i3 3, void, i3 4, void, i3 5, void" [control_SRAM_HLS.cpp:59]   --->   Operation 46 'switch' 'switch_ln59' <Predicate = (!reset_read)> <Delay = 0.72>
+ST_1 : Operation 47 [1/1] (0.00ns) (grouped into LUT with out node select_ln65_1)   --->   "%select_ln65 = select i1 %we_read, i3 2, i3 5" [control_SRAM_HLS.cpp:65]   --->   Operation 47 'select' 'select_ln65' <Predicate = (!reset_read & state_load == 5 & or_ln61)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (0.34ns) (out node of the LUT)   --->   "%select_ln65_1 = select i1 %or_ln61, i3 %select_ln65, i3 0" [control_SRAM_HLS.cpp:65]   --->   Operation 48 'select' 'select_ln65_1' <Predicate = (!reset_read & state_load == 5)> <Delay = 0.34> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.46ns)   --->   "%br_ln84 = br void" [control_SRAM_HLS.cpp:84]   --->   Operation 49 'br' 'br_ln84' <Predicate = (!reset_read & state_load == 5)> <Delay = 0.46>
+ST_1 : Operation 50 [1/1] (0.00ns) (grouped into LUT with out node select_ln64_1)   --->   "%select_ln64 = select i1 %we_read, i3 4, i3 3" [control_SRAM_HLS.cpp:64]   --->   Operation 50 'select' 'select_ln64' <Predicate = (!reset_read & state_load == 4 & or_ln61)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (0.34ns) (out node of the LUT)   --->   "%select_ln64_1 = select i1 %or_ln61, i3 %select_ln64, i3 0" [control_SRAM_HLS.cpp:64]   --->   Operation 51 'select' 'select_ln64_1' <Predicate = (!reset_read & state_load == 4)> <Delay = 0.34> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (0.58ns)   --->   "%store_ln64 = store i3 %select_ln64_1, i3 %next_state" [control_SRAM_HLS.cpp:64]   --->   Operation 52 'store' 'store_ln64' <Predicate = (!reset_read & state_load == 4)> <Delay = 0.58>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%write_ln80 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ce_n, i1 0" [control_SRAM_HLS.cpp:80]   --->   Operation 53 'write' 'write_ln80' <Predicate = (!reset_read & state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%write_ln80 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ce2, i1 1" [control_SRAM_HLS.cpp:80]   --->   Operation 54 'write' 'write_ln80' <Predicate = (!reset_read & state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%write_ln80 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ce2_n, i1 0" [control_SRAM_HLS.cpp:80]   --->   Operation 55 'write' 'write_ln80' <Predicate = (!reset_read & state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%write_ln80 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Cke_n, i1 0" [control_SRAM_HLS.cpp:80]   --->   Operation 56 'write' 'write_ln80' <Predicate = (!reset_read & state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%write_ln80 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Rw_n, i1 0" [control_SRAM_HLS.cpp:80]   --->   Operation 57 'write' 'write_ln80' <Predicate = (!reset_read & state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%write_ln80 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ld_n, i1 1" [control_SRAM_HLS.cpp:80]   --->   Operation 58 'write' 'write_ln80' <Predicate = (!reset_read & state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.46ns)   --->   "%store_ln80 = store i1 0, i1 %dq_t" [control_SRAM_HLS.cpp:80]   --->   Operation 59 'store' 'store_ln80' <Predicate = (!reset_read & state_load == 4)> <Delay = 0.46>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%write_ln80 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %ready_r, i1 0" [control_SRAM_HLS.cpp:80]   --->   Operation 60 'write' 'write_ln80' <Predicate = (!reset_read & state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%br_ln81 = br void %.thread5" [control_SRAM_HLS.cpp:81]   --->   Operation 61 'br' 'br_ln81' <Predicate = (!reset_read & state_load == 4)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns) (grouped into LUT with out node select_ln63_1)   --->   "%select_ln63 = select i1 %we_read, i3 2, i3 5" [control_SRAM_HLS.cpp:63]   --->   Operation 62 'select' 'select_ln63' <Predicate = (!reset_read & state_load == 3 & or_ln61)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 63 [1/1] (0.34ns) (out node of the LUT)   --->   "%select_ln63_1 = select i1 %or_ln61, i3 %select_ln63, i3 0" [control_SRAM_HLS.cpp:63]   --->   Operation 63 'select' 'select_ln63_1' <Predicate = (!reset_read & state_load == 3)> <Delay = 0.34> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 64 [1/1] (0.46ns)   --->   "%br_ln87 = br void" [control_SRAM_HLS.cpp:87]   --->   Operation 64 'br' 'br_ln87' <Predicate = (!reset_read & state_load == 3)> <Delay = 0.46>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%storemerge1 = phi i3 %select_ln63_1, void, i3 %select_ln65_1, void" [control_SRAM_HLS.cpp:63]   --->   Operation 65 'phi' 'storemerge1' <Predicate = (!reset_read & state_load == 5) | (!reset_read & state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%storemerge = phi i1 0, void, i1 1, void"   --->   Operation 66 'phi' 'storemerge' <Predicate = (!reset_read & state_load == 5) | (!reset_read & state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.58ns)   --->   "%store_ln65 = store i3 %storemerge1, i3 %next_state" [control_SRAM_HLS.cpp:65]   --->   Operation 67 'store' 'store_ln65' <Predicate = (!reset_read & state_load == 5) | (!reset_read & state_load == 3)> <Delay = 0.58>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%write_ln86 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ce_n, i1 0" [control_SRAM_HLS.cpp:86]   --->   Operation 68 'write' 'write_ln86' <Predicate = (!reset_read & state_load == 5) | (!reset_read & state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%write_ln83 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ce2, i1 1" [control_SRAM_HLS.cpp:83]   --->   Operation 69 'write' 'write_ln83' <Predicate = (!reset_read & state_load == 5) | (!reset_read & state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%write_ln86 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ce2_n, i1 0" [control_SRAM_HLS.cpp:86]   --->   Operation 70 'write' 'write_ln86' <Predicate = (!reset_read & state_load == 5) | (!reset_read & state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%write_ln83 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Cke_n, i1 0" [control_SRAM_HLS.cpp:83]   --->   Operation 71 'write' 'write_ln83' <Predicate = (!reset_read & state_load == 5) | (!reset_read & state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%write_ln86 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Rw_n, i1 1" [control_SRAM_HLS.cpp:86]   --->   Operation 72 'write' 'write_ln86' <Predicate = (!reset_read & state_load == 5) | (!reset_read & state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%write_ln83 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ld_n, i1 %storemerge" [control_SRAM_HLS.cpp:83]   --->   Operation 73 'write' 'write_ln83' <Predicate = (!reset_read & state_load == 5) | (!reset_read & state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.46ns)   --->   "%store_ln86 = store i1 1, i1 %dq_t" [control_SRAM_HLS.cpp:86]   --->   Operation 74 'store' 'store_ln86' <Predicate = (!reset_read & state_load == 5) | (!reset_read & state_load == 3)> <Delay = 0.46>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%write_ln83 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %ready_r, i1 0" [control_SRAM_HLS.cpp:83]   --->   Operation 75 'write' 'write_ln83' <Predicate = (!reset_read & state_load == 5) | (!reset_read & state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%Dq_read = read i36 @_ssdm_op_Read.ap_none.i36P0A, i36 %Dq" [control_SRAM_HLS.cpp:92]   --->   Operation 76 'read' 'Dq_read' <Predicate = (!reset_read & state_load == 5) | (!reset_read & state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.46ns)   --->   "%store_ln92 = store i36 %Dq_read, i36 %data_out_reg_V" [control_SRAM_HLS.cpp:92]   --->   Operation 77 'store' 'store_ln92' <Predicate = (!reset_read & state_load == 5) | (!reset_read & state_load == 3)> <Delay = 0.46>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%br_ln93 = br void %._crit_edge" [control_SRAM_HLS.cpp:93]   --->   Operation 78 'br' 'br_ln93' <Predicate = (!reset_read & state_load == 5) | (!reset_read & state_load == 3)> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns) (grouped into LUT with out node select_ln62_1)   --->   "%select_ln62 = select i1 %we_read, i3 4, i3 3" [control_SRAM_HLS.cpp:62]   --->   Operation 79 'select' 'select_ln62' <Predicate = (!reset_read & state_load == 2 & or_ln61)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 80 [1/1] (0.34ns) (out node of the LUT)   --->   "%select_ln62_1 = select i1 %or_ln61, i3 %select_ln62, i3 0" [control_SRAM_HLS.cpp:62]   --->   Operation 80 'select' 'select_ln62_1' <Predicate = (!reset_read & state_load == 2)> <Delay = 0.34> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 81 [1/1] (0.58ns)   --->   "%store_ln62 = store i3 %select_ln62_1, i3 %next_state" [control_SRAM_HLS.cpp:62]   --->   Operation 81 'store' 'store_ln62' <Predicate = (!reset_read & state_load == 2)> <Delay = 0.58>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%write_ln77 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ce_n, i1 0" [control_SRAM_HLS.cpp:77]   --->   Operation 82 'write' 'write_ln77' <Predicate = (!reset_read & state_load == 2)> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%write_ln77 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ce2, i1 1" [control_SRAM_HLS.cpp:77]   --->   Operation 83 'write' 'write_ln77' <Predicate = (!reset_read & state_load == 2)> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%write_ln77 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ce2_n, i1 0" [control_SRAM_HLS.cpp:77]   --->   Operation 84 'write' 'write_ln77' <Predicate = (!reset_read & state_load == 2)> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%write_ln77 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Rw_n, i1 0" [control_SRAM_HLS.cpp:77]   --->   Operation 85 'write' 'write_ln77' <Predicate = (!reset_read & state_load == 2)> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%write_ln77 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ld_n, i1 0" [control_SRAM_HLS.cpp:77]   --->   Operation 86 'write' 'write_ln77' <Predicate = (!reset_read & state_load == 2)> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.46ns)   --->   "%store_ln77 = store i1 0, i1 %dq_t" [control_SRAM_HLS.cpp:77]   --->   Operation 87 'store' 'store_ln77' <Predicate = (!reset_read & state_load == 2)> <Delay = 0.46>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%write_ln77 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %ready_r, i1 0" [control_SRAM_HLS.cpp:77]   --->   Operation 88 'write' 'write_ln77' <Predicate = (!reset_read & state_load == 2)> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%br_ln78 = br void %.thread5" [control_SRAM_HLS.cpp:78]   --->   Operation 89 'br' 'br_ln78' <Predicate = (!reset_read & state_load == 2)> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node select_ln61_1)   --->   "%select_ln61 = select i1 %we_read, i2 2, i2 3" [control_SRAM_HLS.cpp:61]   --->   Operation 90 'select' 'select_ln61' <Predicate = (!reset_read & state_load == 0 & or_ln61)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 91 [1/1] (0.34ns) (out node of the LUT)   --->   "%select_ln61_1 = select i1 %or_ln61, i2 %select_ln61, i2 0" [control_SRAM_HLS.cpp:61]   --->   Operation 91 'select' 'select_ln61_1' <Predicate = (!reset_read & state_load == 0)> <Delay = 0.34> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%zext_ln61 = zext i2 %select_ln61_1" [control_SRAM_HLS.cpp:61]   --->   Operation 92 'zext' 'zext_ln61' <Predicate = (!reset_read & state_load == 0)> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.58ns)   --->   "%store_ln61 = store i3 %zext_ln61, i3 %next_state" [control_SRAM_HLS.cpp:61]   --->   Operation 93 'store' 'store_ln61' <Predicate = (!reset_read & state_load == 0)> <Delay = 0.58>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%write_ln74 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %ready_r, i1 1" [control_SRAM_HLS.cpp:74]   --->   Operation 94 'write' 'write_ln74' <Predicate = (!reset_read & state_load == 0)> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.46ns)   --->   "%store_ln74 = store i1 1, i1 %dq_t" [control_SRAM_HLS.cpp:74]   --->   Operation 95 'store' 'store_ln74' <Predicate = (!reset_read & state_load == 0)> <Delay = 0.46>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%write_ln74 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ce_n, i1 0" [control_SRAM_HLS.cpp:74]   --->   Operation 96 'write' 'write_ln74' <Predicate = (!reset_read & state_load == 0)> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%write_ln74 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ce2, i1 1" [control_SRAM_HLS.cpp:74]   --->   Operation 97 'write' 'write_ln74' <Predicate = (!reset_read & state_load == 0)> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%write_ln74 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ce2_n, i1 0" [control_SRAM_HLS.cpp:74]   --->   Operation 98 'write' 'write_ln74' <Predicate = (!reset_read & state_load == 0)> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%write_ln74 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Rw_n, i1 1" [control_SRAM_HLS.cpp:74]   --->   Operation 99 'write' 'write_ln74' <Predicate = (!reset_read & state_load == 0)> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%write_ln74 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ld_n, i1 0" [control_SRAM_HLS.cpp:74]   --->   Operation 100 'write' 'write_ln74' <Predicate = (!reset_read & state_load == 0)> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%br_ln75 = br void %.thread5" [control_SRAM_HLS.cpp:75]   --->   Operation 101 'br' 'br_ln75' <Predicate = (!reset_read & state_load == 0)> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.58ns)   --->   "%store_ln60 = store i3 0, i3 %next_state" [control_SRAM_HLS.cpp:60]   --->   Operation 102 'store' 'store_ln60' <Predicate = (!reset_read & state_load == 1)> <Delay = 0.58>
+ST_1 : Operation 103 [1/1] (0.46ns)   --->   "%store_ln71 = store i1 1, i1 %dq_t" [control_SRAM_HLS.cpp:71]   --->   Operation 103 'store' 'store_ln71' <Predicate = (!reset_read & state_load == 1)> <Delay = 0.46>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%write_ln71 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ce_n, i1 1" [control_SRAM_HLS.cpp:71]   --->   Operation 104 'write' 'write_ln71' <Predicate = (!reset_read & state_load == 1)> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%write_ln71 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ce2, i1 0" [control_SRAM_HLS.cpp:71]   --->   Operation 105 'write' 'write_ln71' <Predicate = (!reset_read & state_load == 1)> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%write_ln71 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ce2_n, i1 1" [control_SRAM_HLS.cpp:71]   --->   Operation 106 'write' 'write_ln71' <Predicate = (!reset_read & state_load == 1)> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%write_ln71 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Cke_n, i1 0" [control_SRAM_HLS.cpp:71]   --->   Operation 107 'write' 'write_ln71' <Predicate = (!reset_read & state_load == 1)> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%write_ln71 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Ld_n, i1 0" [control_SRAM_HLS.cpp:71]   --->   Operation 108 'write' 'write_ln71' <Predicate = (!reset_read & state_load == 1)> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%write_ln71 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Rw_n, i1 1" [control_SRAM_HLS.cpp:71]   --->   Operation 109 'write' 'write_ln71' <Predicate = (!reset_read & state_load == 1)> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%write_ln71 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %Oe_n, i1 0" [control_SRAM_HLS.cpp:71]   --->   Operation 110 'write' 'write_ln71' <Predicate = (!reset_read & state_load == 1)> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%write_ln71 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %ready_r, i1 0" [control_SRAM_HLS.cpp:71]   --->   Operation 111 'write' 'write_ln71' <Predicate = (!reset_read & state_load == 1)> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%br_ln72 = br void %.thread5" [control_SRAM_HLS.cpp:72]   --->   Operation 112 'br' 'br_ln72' <Predicate = (!reset_read & state_load == 1)> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%br_ln91 = br void %._crit_edge" [control_SRAM_HLS.cpp:91]   --->   Operation 113 'br' 'br_ln91' <Predicate = (!reset_read & state_load != 3 & state_load != 5 & state_load != 6 & state_load != 7)> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%next_state_load = load i3 %next_state" [control_SRAM_HLS.cpp:96]   --->   Operation 114 'load' 'next_state_load' <Predicate = (!reset_read)> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.56ns)   --->   "%icmp_ln96 = icmp_eq  i3 %next_state_load, i3 4" [control_SRAM_HLS.cpp:96]   --->   Operation 115 'icmp' 'icmp_ln96' <Predicate = (!reset_read)> <Delay = 0.56> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.56> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 116 [1/1] (0.56ns)   --->   "%icmp_ln96_1 = icmp_ne  i3 %state_load, i3 4" [control_SRAM_HLS.cpp:96]   --->   Operation 116 'icmp' 'icmp_ln96_1' <Predicate = (!reset_read)> <Delay = 0.56> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.56> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 117 [1/1] (0.14ns)   --->   "%and_ln96 = and i1 %icmp_ln96, i1 %icmp_ln96_1" [control_SRAM_HLS.cpp:96]   --->   Operation 117 'and' 'and_ln96' <Predicate = (!reset_read)> <Delay = 0.14> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.14> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%br_ln96 = br i1 %and_ln96, void, void %._crit_edge2" [control_SRAM_HLS.cpp:96]   --->   Operation 118 'br' 'br_ln96' <Predicate = (!reset_read)> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.56ns)   --->   "%icmp_ln98 = icmp_eq  i3 %next_state_load, i3 5" [control_SRAM_HLS.cpp:98]   --->   Operation 119 'icmp' 'icmp_ln98' <Predicate = (!reset_read & !and_ln96)> <Delay = 0.56> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.56> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 120 [1/1] (0.56ns)   --->   "%icmp_ln98_1 = icmp_ne  i3 %state_load, i3 5" [control_SRAM_HLS.cpp:98]   --->   Operation 120 'icmp' 'icmp_ln98_1' <Predicate = (!reset_read & !and_ln96)> <Delay = 0.56> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.56> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 121 [1/1] (0.14ns)   --->   "%and_ln98 = and i1 %icmp_ln98, i1 %icmp_ln98_1" [control_SRAM_HLS.cpp:98]   --->   Operation 121 'and' 'and_ln98' <Predicate = (!reset_read & !and_ln96)> <Delay = 0.14> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.14> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%br_ln98 = br i1 %and_ln98, void %._crit_edge4, void %._crit_edge2" [control_SRAM_HLS.cpp:98]   --->   Operation 122 'br' 'br_ln98' <Predicate = (!reset_read & !and_ln96)> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.46ns)   --->   "%store_ln100 = store i19 %addr_in_read, i19 %addr_reg_V" [control_SRAM_HLS.cpp:100]   --->   Operation 123 'store' 'store_ln100' <Predicate = (!reset_read & and_ln98) | (!reset_read & and_ln96)> <Delay = 0.46>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%br_ln101 = br void %._crit_edge4" [control_SRAM_HLS.cpp:101]   --->   Operation 124 'br' 'br_ln101' <Predicate = (!reset_read & and_ln98) | (!reset_read & and_ln96)> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%addr_reg_V_load = load i19 %addr_reg_V" [control_SRAM_HLS.cpp:104]   --->   Operation 125 'load' 'addr_reg_V_load' <Predicate = (!reset_read)> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%write_ln104 = write void @_ssdm_op_Write.ap_none.i19P0A, i19 %Addr, i19 %addr_reg_V_load" [control_SRAM_HLS.cpp:104]   --->   Operation 126 'write' 'write_ln104' <Predicate = (!reset_read)> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%data_out_reg_V_load = load i36 %data_out_reg_V" [control_SRAM_HLS.cpp:105]   --->   Operation 127 'load' 'data_out_reg_V_load' <Predicate = (!reset_read)> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%write_ln105 = write void @_ssdm_op_Write.ap_none.i36P0A, i36 %data_out, i36 %data_out_reg_V_load" [control_SRAM_HLS.cpp:105]   --->   Operation 128 'write' 'write_ln105' <Predicate = (!reset_read)> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%dq_t_load = load i1 %dq_t" [control_SRAM_HLS.cpp:106]   --->   Operation 129 'load' 'dq_t_load' <Predicate = (!reset_read)> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%br_ln106 = br i1 %dq_t_load, void, void %._crit_edge5" [control_SRAM_HLS.cpp:106]   --->   Operation 130 'br' 'br_ln106' <Predicate = (!reset_read)> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%write_ln106 = write void @_ssdm_op_Write.ap_none.i36P0A, i36 %Dq, i36 %data_in_read" [control_SRAM_HLS.cpp:106]   --->   Operation 131 'write' 'write_ln106' <Predicate = (!reset_read & !dq_t_load)> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%br_ln106 = br void %._crit_edge5" [control_SRAM_HLS.cpp:106]   --->   Operation 132 'br' 'br_ln106' <Predicate = (!reset_read & !dq_t_load)> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.46ns)   --->   "%br_ln0 = br void"   --->   Operation 133 'br' 'br_ln0' <Predicate = (!reset_read)> <Delay = 0.46>
+ST_1 : Operation 134 [1/1] (0.58ns)   --->   "%store_ln52 = store i3 0, i3 %next_state" [control_SRAM_HLS.cpp:52]   --->   Operation 134 'store' 'store_ln52' <Predicate = (reset_read)> <Delay = 0.58>
+ST_1 : Operation 135 [1/1] (0.46ns)   --->   "%store_ln53 = store i19 0, i19 %addr_reg_V" [control_SRAM_HLS.cpp:53]   --->   Operation 135 'store' 'store_ln53' <Predicate = (reset_read)> <Delay = 0.46>
+ST_1 : Operation 136 [1/1] (0.46ns)   --->   "%store_ln54 = store i36 0, i36 %data_out_reg_V" [control_SRAM_HLS.cpp:54]   --->   Operation 136 'store' 'store_ln54' <Predicate = (reset_read)> <Delay = 0.46>
+ST_1 : Operation 137 [1/1] (0.46ns)   --->   "%store_ln55 = store i1 1, i1 %dq_t" [control_SRAM_HLS.cpp:55]   --->   Operation 137 'store' 'store_ln55' <Predicate = (reset_read)> <Delay = 0.46>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%write_ln56 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %ready_r, i1 0" [control_SRAM_HLS.cpp:56]   --->   Operation 138 'write' 'write_ln56' <Predicate = (reset_read)> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.46ns)   --->   "%br_ln57 = br void" [control_SRAM_HLS.cpp:57]   --->   Operation 139 'br' 'br_ln57' <Predicate = (reset_read)> <Delay = 0.46>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%empty = phi i3 %next_state_load, void %._crit_edge5, i3 0, void" [control_SRAM_HLS.cpp:96]   --->   Operation 140 'phi' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%store_ln109 = store i3 %empty, i3 %state" [control_SRAM_HLS.cpp:109]   --->   Operation 141 'store' 'store_ln109' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%ret_ln110 = ret" [control_SRAM_HLS.cpp:110]   --->   Operation 142 'ret' 'ret_ln110' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.54ns
+The critical path consists of the following:
+	wire read operation ('re_read', control_SRAM_HLS.cpp:6) on port 're' (control_SRAM_HLS.cpp:6) [60]  (0 ns)
+	'or' operation ('or_ln61', control_SRAM_HLS.cpp:61) [64]  (0.148 ns)
+	'select' operation ('select_ln65_1', control_SRAM_HLS.cpp:65) [71]  (0.345 ns)
+	multiplexor before 'phi' operation ('storemerge1', control_SRAM_HLS.cpp:63) with incoming values : ('select_ln65_1', control_SRAM_HLS.cpp:65) ('select_ln63_1', control_SRAM_HLS.cpp:63) [91]  (0.46 ns)
+	'phi' operation ('storemerge1', control_SRAM_HLS.cpp:63) with incoming values : ('select_ln65_1', control_SRAM_HLS.cpp:65) ('select_ln63_1', control_SRAM_HLS.cpp:63) [91]  (0 ns)
+	'store' operation ('store_ln65', control_SRAM_HLS.cpp:65) of variable 'storemerge1', control_SRAM_HLS.cpp:63 on static variable 'next_state' [93]  (0.586 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'control_SRAM_HLS/clk' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="SRAM_hls" solutionName="solution1" date="2026-01-14T17:53:01.117+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'state' is power-on initialization." projectName="SRAM_hls" solutionName="solution1" date="2026-01-14T17:53:01.100+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dq_t' is power-on initialization." projectName="SRAM_hls" solutionName="solution1" date="2026-01-14T17:53:01.067+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'data_out_reg_V' is power-on initialization." projectName="SRAM_hls" solutionName="solution1" date="2026-01-14T17:53:01.056+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'addr_reg_V' is power-on initialization." projectName="SRAM_hls" solutionName="solution1" date="2026-01-14T17:53:01.050+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'next_state' is power-on initialization." projectName="SRAM_hls" solutionName="solution1" date="2026-01-14T17:53:01.044+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'Cke_n' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="SRAM_hls" solutionName="solution1" date="2026-01-14T17:53:01.010+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'Ld_n' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="SRAM_hls" solutionName="solution1" date="2026-01-14T17:53:01.001+0100" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
